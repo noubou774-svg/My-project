@@ -205,6 +205,24 @@ body.sat-tutoring .student-video3 {
     height: 280px !important;
     font-size: 0 !important;
     color: transparent !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    padding: 1.25rem !important;
+    border-radius: 1.125rem !important;
+    background:
+        linear-gradient(180deg, rgba(23, 50, 77, 0.05) 0%, rgba(23, 50, 77, 0.75) 100%),
+        linear-gradient(145deg, #214F70, #17324D) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+body.sat-tutoring .student-video::after,
+body.sat-tutoring .student-video2::after,
+body.sat-tutoring .student-video3::after {
+    content: attr(data-label) !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #fff !important;
 }
 
 /* ── Peer tutoring / Zoom-style video ── */
