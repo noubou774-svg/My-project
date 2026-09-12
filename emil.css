@@ -1,0 +1,325 @@
+/* Learnivia — Emil Kowalski design system (tokens + motion + polish) */
+
+:root {
+    /* Motion — strong custom curves (never weak built-in ease-in) */
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+
+    --dur-instant: 100ms;
+    --dur-fast: 160ms;
+    --dur-ui: 200ms;
+    --dur-panel: 280ms;
+
+    /* Typography — optical sizing (Apple + Emil) */
+    --font-display: clamp(2.25rem, 5vw, 4rem);
+    --font-h1: clamp(1.75rem, 3.5vw, 2.75rem);
+    --font-h2: clamp(1.35rem, 2.5vw, 1.75rem);
+    --font-body: 1rem;
+    --font-small: 0.875rem;
+    --leading-tight: 1.08;
+    --leading-body: 1.55;
+    --tracking-display: -0.03em;
+    --tracking-heading: -0.02em;
+    --tracking-body: 0;
+
+    /* Surfaces — translucent materials (Apple) */
+    --glass-bg: rgba(255, 252, 248, 0.72);
+    --glass-border: rgba(255, 255, 255, 0.45);
+    --glass-blur: blur(20px) saturate(1.35);
+    --scrim: rgba(15, 36, 56, 0.4);
+
+    /* Elevation */
+    --shadow-1: 0 1px 2px rgba(23, 50, 77, 0.06), 0 4px 16px rgba(23, 50, 77, 0.06);
+    --shadow-2: 0 8px 28px rgba(23, 50, 77, 0.1);
+    --shadow-3: 0 20px 50px rgba(23, 50, 77, 0.14);
+}
+
+/* ── Typography hierarchy ── */
+h1, .front_text, .programs, .real-storytext, .How-text, .peer-text {
+    letter-spacing: var(--tracking-display);
+    line-height: var(--leading-tight);
+    font-optical-sizing: auto;
+}
+
+h2, .learning-card h2, .blog-header h2, .faq-heading h2 {
+    letter-spacing: var(--tracking-heading);
+    line-height: var(--leading-tight);
+}
+
+p, li, .front_text3, .storytext, .How-text2 {
+    letter-spacing: var(--tracking-body);
+    line-height: var(--leading-body);
+}
+
+/* ── Translucent chrome (Apple materials) ── */
+.top,
+.footer-nav {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border-bottom: 1px solid rgba(23, 50, 77, 0.06) !important;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset !important;
+}
+
+.explore-menu {
+    background: rgba(255, 252, 248, 0.94) !important;
+    backdrop-filter: blur(24px) saturate(1.2) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(1.2) !important;
+    transform-origin: top center;
+}
+
+.explore-menu.open {
+    transition:
+        transform var(--dur-panel) var(--ease-drawer),
+        opacity var(--dur-ui) var(--ease-out),
+        visibility var(--dur-panel) var(--ease-out) !important;
+}
+
+/* ── Press feedback (Emil: every button must feel responsive) ── */
+button,
+.signup-button,
+.signin-button,
+.donate-1,
+.start-learning-button,
+.for-parents,
+.for-educator,
+.join-bootcamp,
+.learning-card button,
+.signin-submit,
+.signup-submit,
+.google-signin,
+.see-all-news,
+.faq-question {
+    transition:
+        transform var(--dur-fast) var(--ease-out),
+        background-color var(--dur-ui) ease,
+        color var(--dur-ui) ease,
+        box-shadow var(--dur-ui) var(--ease-out),
+        border-color var(--dur-ui) ease;
+}
+
+button:active,
+.signup-button:active,
+.start-learning-button:active,
+.for-parents:active,
+.for-educator:active,
+.join-bootcamp:active,
+.learning-card button:active,
+.signin-submit:active,
+.signup-submit:active,
+.donate-1:active {
+    transform: scale(0.97) !important;
+    transition-duration: var(--dur-instant) !important;
+}
+
+/* ── Hover — fine pointer only (Emil + Apple) ── */
+@media (hover: hover) and (pointer: fine) {
+    .learning-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-3);
+        transition: transform var(--dur-ui) var(--ease-out), box-shadow var(--dur-ui) var(--ease-out);
+    }
+
+    .story-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-2);
+    }
+
+    .blog-image:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+
+    .explore-item:hover h3 {
+        color: var(--lv-teal);
+    }
+
+    .index-1:hover,
+    .about-1:hover,
+    .faq-1:hover,
+    .story-1:hover,
+    .involve-1:hover,
+    .donate-1:hover,
+    .signin-button:hover {
+        transform: translateY(-1px);
+    }
+
+    .signup-button:hover,
+    .start-learning-button:hover,
+    .join-bootcamp:hover,
+    .learning-card button:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-2);
+    }
+
+    .how-step:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* ── Cards — cohesive elevation + radius ── */
+.learning-card,
+.story-card,
+.signin-card,
+.signup-card,
+.creator,
+.certification-wrap {
+    border-radius: 1.25rem !important;
+    box-shadow: var(--shadow-1) !important;
+    border: 1px solid rgba(23, 50, 77, 0.06) !important;
+}
+
+.learning-card {
+    background: var(--lv-surface) !important;
+}
+
+/* ── Stagger entrance (Emil: 30–80ms between items) ── */
+.cards-container .learning-card,
+.stories-container .story-card,
+.tutor-videos-grid > *,
+.blog-grid .blog-card,
+.how-step {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: lv-rise var(--dur-panel) var(--ease-out) forwards;
+}
+
+.cards-container .learning-card:nth-child(1) { animation-delay: 0ms; }
+.cards-container .learning-card:nth-child(2) { animation-delay: 50ms; }
+.cards-container .learning-card:nth-child(3) { animation-delay: 100ms; }
+.cards-container .learning-card:nth-child(4) { animation-delay: 150ms; }
+
+.stories-container .story-card:nth-child(1) { animation-delay: 0ms; }
+.stories-container .story-card:nth-child(2) { animation-delay: 60ms; }
+.stories-container .story-card:nth-child(3) { animation-delay: 120ms; }
+
+.tutor-videos-grid > *:nth-child(1) { animation-delay: 0ms; }
+.tutor-videos-grid > *:nth-child(2) { animation-delay: 60ms; }
+.tutor-videos-grid > *:nth-child(3) { animation-delay: 120ms; }
+
+.how-step:nth-child(1) { animation-delay: 0ms; }
+.how-step:nth-child(2) { animation-delay: 70ms; }
+.how-step:nth-child(3) { animation-delay: 140ms; }
+
+@keyframes lv-rise {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enter from scale(0.95) + opacity — never scale(0) */
+.lv-reveal {
+    opacity: 0;
+    transform: scale(0.98) translateY(8px);
+    transition:
+        opacity var(--dur-panel) var(--ease-out),
+        transform var(--dur-panel) var(--ease-out);
+}
+
+.lv-reveal.is-visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* ── Page load — fast, subtle (not 1.2s fade) ── */
+.page {
+    animation: lv-page-in 400ms var(--ease-out) both !important;
+}
+
+@keyframes lv-page-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.top {
+    animation: lv-nav-in 350ms var(--ease-out) 50ms both !important;
+}
+
+@keyframes lv-nav-in {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Hero — restrained motion (occasional, not distracting) ── */
+.space .bga-05__terrain,
+.space .bga-05__ridge {
+    animation: none !important;
+}
+
+.space {
+    animation: lv-hero-in 500ms var(--ease-out) 80ms both;
+}
+
+@keyframes lv-hero-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── FAQ accordion — ease-out, spatial consistency ── */
+.faq-item.active .faq-plus {
+    transition: transform var(--dur-ui) var(--ease-out), color var(--dur-ui) ease;
+}
+
+.faq-answer {
+    transition: grid-template-rows var(--dur-ui) var(--ease-out) !important;
+}
+
+/* ── Focus visible (craft) ── */
+:focus-visible {
+    outline: 2px solid rgba(57, 166, 163, 0.55);
+    outline-offset: 3px;
+}
+
+/* ── Reduced motion (Emil: gentler, not zero) ── */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .page,
+    .top,
+    .space {
+        animation: none !important;
+    }
+
+    .cards-container .learning-card,
+    .stories-container .story-card,
+    .tutor-videos-grid > *,
+    .how-step {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .lv-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    .top,
+    .footer-nav,
+    .explore-menu {
+        background: #fff9f2 !important;
+        backdrop-filter: none !important;
+    }
+}

@@ -3,6 +3,7 @@
 :root {
     --section-y: clamp(3.5rem, 7vw, 5.5rem);
     --container: min(1180px, calc(100% - 3rem));
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* ── Shared container ── */
@@ -281,7 +282,9 @@
     border-radius: 1.25rem !important;
     background: var(--lv-surface) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+    box-shadow: var(--shadow-1, 0 8px 28px rgba(23, 50, 77, 0.1)) !important;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 .learning-card h2 {
