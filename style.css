@@ -138,8 +138,8 @@ body {
 .story-1,
 .involve-1,
 .donate-1 {
-    position: absolute;
-    display: flex;
+    position: static;
+    display: inline-flex;
     align-items: center;
     border: none;
     background: transparent;
@@ -152,28 +152,11 @@ body {
     text-decoration: none;
     cursor: pointer;
     white-space: nowrap;
+    margin-left: 0;
     transition:
         transform .3s ease,
         color .25s ease,
         opacity .25s ease;
-}
-.index-1 {
-    margin-left: 365px;
-}
-.about-1 {
-    margin-left: 515px;
-}
-.faq-1 {
-    margin-left: 565px;
-}
-.story-1 {
-    margin-left: 610px;
-}
-.involve-1 {
-    margin-left: 665px;
-}
-.donate-1 {
-    margin-left: 790px;
 }
 .index-1,
 .involve-1 {

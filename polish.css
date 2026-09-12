@@ -587,16 +587,6 @@ body.page > section:not(.explore-menu):not(.programs-section),
 }
 
 @media (max-width: 768px) {
-    .top {
-        justify-content: center !important;
-    }
-
-    .brand {
-        width: 100%;
-        justify-content: center;
-        margin-right: 0 !important;
-    }
-
     .hero-actions {
         flex-direction: column;
     }

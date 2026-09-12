@@ -1,0 +1,103 @@
+/* Cross-page fixes from UI audit */
+
+.about .values-area,
+.values-area {
+    margin-top: 4rem !important;
+}
+
+.about .footer,
+.learnivia-footer + .footer,
+.footer {
+    margin-top: 3rem !important;
+}
+
+.learnivia-blog {
+    width: 100% !important;
+    max-width: 1180px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.stories-grid {
+    width: min(1180px, 92%) !important;
+    margin: 0 auto !important;
+}
+
+.blog.css .author-avatar,
+.author-avatar {
+    background: var(--lv-teal, #39A6A3) !important;
+}
+
+.donate-hero {
+    min-height: 0 !important;
+    padding-top: calc(var(--nav-height, 72px) + 2rem) !important;
+}
+
+.signin-page,
+.signup-page {
+    margin-top: var(--nav-height, 72px) !important;
+    padding-top: 2rem !important;
+}
+
+.signin-card,
+.signup-card {
+    border-radius: 1.25rem !important;
+}
+
+.next-button,
+.message-button {
+    text-decoration: none !important;
+}
+
+.faq-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 249, 242, 0.9);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.faq-back:hover {
+    color: #fff;
+}
+
+/* Override page CSS that hides nav/auth on mobile */
+@media (max-width: 900px) {
+    .top .index-1,
+    .top .involve-1,
+    .nav-main .index-1,
+    .nav-main .involve-1 {
+        display: inline-flex !important;
+    }
+
+    .nav-actions .signup-button {
+        display: inline-flex !important;
+    }
+}
+
+.faq-with-nav .faq-header {
+    padding-top: calc(var(--nav-height, 72px) + 1.5rem);
+}
+
+.faq-with-nav .faq-back {
+    display: none;
+}
+
+.space .for-parents,
+.space .for-educator,
+.front2 .for-parents,
+.front2 .for-educator {
+    position: static !important;
+    margin: 0.5rem 0 0 !important;
+    display: inline-flex !important;
+}
+
+.space .for-parents,
+.front2 .for-parents {
+    border-color: rgba(23, 50, 77, 0.25) !important;
+    color: var(--lv-navy, #17324D) !important;
+    background: rgba(255, 252, 248, 0.85) !important;
+}

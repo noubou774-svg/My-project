@@ -1,0 +1,458 @@
+/* Learnivia — unified header (loads last, wins over page CSS) */
+
+:root {
+    --nav-height: 72px;
+    --nav-pad-x: clamp(1rem, 4vw, 2.5rem);
+}
+
+/* ── Shell ── */
+.top {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 100000 !important;
+    width: 100% !important;
+    height: var(--nav-height) !important;
+    min-height: var(--nav-height) !important;
+    max-height: var(--nav-height) !important;
+    padding: 0 var(--nav-pad-x) !important;
+    margin: 0 !important;
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    grid-template-areas: "brand nav actions" !important;
+    align-items: center !important;
+    gap: 0 1.25rem !important;
+    flex-wrap: nowrap !important;
+    justify-content: unset !important;
+    background: rgba(255, 252, 248, 0.88) !important;
+    backdrop-filter: blur(20px) saturate(1.4) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(1.4) !important;
+    border-bottom: 1px solid rgba(23, 50, 77, 0.07) !important;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset, 0 4px 24px rgba(23, 50, 77, 0.06) !important;
+}
+
+/* ── Brand ── */
+.top .brand {
+    grid-area: brand !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    margin: 0 !important;
+    margin-right: 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    flex-shrink: 0 !important;
+    text-decoration: none !important;
+}
+
+.top .fox {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    flex-shrink: 0 !important;
+}
+
+.top .brand-name {
+    font-size: 1.35rem !important;
+    font-weight: 700 !important;
+    color: var(--lv-navy, #17324D) !important;
+    letter-spacing: -0.02em !important;
+    white-space: nowrap !important;
+}
+
+.top .brand:hover {
+    transform: none !important;
+}
+
+.top .brand:hover .fox {
+    transform: rotate(-3deg) scale(1.03) !important;
+}
+
+/* ── Main nav cluster ── */
+.nav-main {
+    grid-area: nav;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: clamp(0.35rem, 1.5vw, 1.1rem) !important;
+    min-width: 0 !important;
+    flex-wrap: nowrap !important;
+}
+
+.nav-actions {
+    grid-area: actions;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 0.5rem !important;
+    flex-shrink: 0 !important;
+}
+
+/* Kill absolute pixel nav from page CSS */
+.top .index-1,
+.top .about-1,
+.top .faq-1,
+.top .story-1,
+.top .involve-1,
+.top .donate-1,
+.top .signin-button,
+.top .signup-button,
+.nav-main .index-1,
+.nav-main .about-1,
+.nav-main .faq-1,
+.nav-main .story-1,
+.nav-main .involve-1,
+.nav-main .donate-1,
+.nav-actions .signin-button,
+.nav-actions .signup-button {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: auto !important;
+    min-height: 0 !important;
+    white-space: nowrap !important;
+}
+
+/* Nav links */
+.nav-main .index-1,
+.nav-main .about-1,
+.nav-main .faq-1,
+.nav-main .story-1,
+.nav-main .involve-1 {
+    padding: 0.45rem 0.65rem !important;
+    border: none !important;
+    background: transparent !important;
+    color: var(--lv-navy, #17324D) !important;
+    font-family: "Quicksand", sans-serif !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    border-radius: 0.5rem !important;
+    letter-spacing: -0.01em !important;
+    transition: color 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 160ms ease !important;
+}
+
+.nav-main .triangle {
+    display: inline-block !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin-left: 0.35rem !important;
+    border-left: 4px solid transparent !important;
+    border-right: 4px solid transparent !important;
+    border-top: 5px solid currentColor !important;
+    border-bottom: none !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    opacity: 0.65 !important;
+    vertical-align: middle !important;
+    transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+.nav-main .index-1.open .triangle,
+.nav-main .involve-1.open .triangle {
+    transform: rotate(180deg) !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .nav-main .index-1:hover,
+    .nav-main .about-1:hover,
+    .nav-main .faq-1:hover,
+    .nav-main .story-1:hover,
+    .nav-main .involve-1:hover {
+        color: var(--lv-teal, #39A6A3) !important;
+        background: rgba(57, 166, 163, 0.08) !important;
+        transform: none !important;
+    }
+}
+
+/* Donate pill */
+.nav-main .donate-1 {
+    padding: 0.42rem 0.95rem !important;
+    border: 1.5px solid var(--lv-navy, #17324D) !important;
+    border-radius: 999px !important;
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    color: var(--lv-navy, #17324D) !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .nav-main .donate-1:hover {
+        color: var(--lv-teal, #39A6A3) !important;
+        border-color: var(--lv-teal, #39A6A3) !important;
+        background: rgba(57, 166, 163, 0.06) !important;
+        transform: none !important;
+    }
+}
+
+/* Auth buttons */
+.nav-actions .signin-button {
+    padding: 0.45rem 0.85rem !important;
+    border: none !important;
+    border-radius: 999px !important;
+    background: transparent !important;
+    color: var(--lv-navy, #17324D) !important;
+    font-family: "Quicksand", sans-serif !important;
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    min-width: 0 !important;
+    height: auto !important;
+}
+
+.nav-actions .signup-button {
+    padding: 0.48rem 1.1rem !important;
+    min-width: 0 !important;
+    height: 38px !important;
+    border: none !important;
+    border-radius: 999px !important;
+    background: var(--lv-navy, #17324D) !important;
+    color: var(--lv-cream, #FFF9F2) !important;
+    font-family: "Quicksand", sans-serif !important;
+    font-size: 0.8125rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 14px rgba(23, 50, 77, 0.15) !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .nav-actions .signin-button:hover {
+        background: rgba(57, 166, 163, 0.1) !important;
+        color: var(--lv-teal, #39A6A3) !important;
+        transform: none !important;
+    }
+
+    .nav-actions .signup-button:hover {
+        background: var(--lv-teal, #39A6A3) !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 6px 18px rgba(57, 166, 163, 0.22) !important;
+    }
+}
+
+.nav-actions .signin-button:active,
+.nav-actions .signup-button:active,
+.nav-main .donate-1:active {
+    transform: scale(0.97) !important;
+}
+
+/* ── Dropdown panel ── */
+.explore-menu {
+    top: var(--nav-height) !important;
+    height: calc(100vh - var(--nav-height)) !important;
+}
+
+/* ── Page offset under fixed nav ── */
+.space {
+    margin-top: var(--nav-height) !important;
+}
+
+body.page > .hero,
+body.page > .debate-hero,
+body.page > .hero-stories,
+body.page > .tutor-hero,
+body.page > .workshops-hero,
+body.page > .donate-hero,
+body.page > .parent-hero,
+.signin-page,
+.signup-page {
+    scroll-margin-top: var(--nav-height);
+}
+
+/* ── Unified buttons site-wide ── */
+.btn-primary,
+.start-learning-button,
+.join-bootcamp,
+.get-started-button,
+.signup2-button,
+.donate-button,
+.partnership-button,
+.educator-button,
+.parent-email-button,
+.learning-card button,
+.signin-submit,
+.signup-submit,
+.next-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.75rem 1.35rem !important;
+    border: none !important;
+    border-radius: 999px !important;
+    background: var(--lv-navy, #17324D) !important;
+    color: var(--lv-cream, #FFF9F2) !important;
+    font-family: "Quicksand", sans-serif !important;
+    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 14px rgba(23, 50, 77, 0.12) !important;
+    transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 160ms ease, box-shadow 160ms ease !important;
+}
+
+.btn-secondary,
+.for-parents,
+.for-educator {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.7rem 1.2rem !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
+    border-radius: 999px !important;
+    background: rgba(255, 252, 248, 0.12) !important;
+    color: var(--lv-cream, #FFF9F2) !important;
+    font-family: "Quicksand", sans-serif !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .btn-primary:hover,
+    .start-learning-button:hover,
+    .join-bootcamp:hover,
+    .get-started-button:hover,
+    .signup2-button:hover,
+    .donate-button:hover,
+    .learning-card button:hover {
+        background: var(--lv-teal, #39A6A3) !important;
+        transform: translateY(-1px) !important;
+    }
+}
+
+.btn-primary:active,
+.start-learning-button:active,
+.join-bootcamp:active,
+.get-started-button:active,
+.signup2-button:active,
+.donate-button:active,
+.learning-card button:active {
+    transform: scale(0.97) !important;
+}
+
+a.btn-primary,
+a.get-started-button,
+a.signup2-button,
+a.for-parents,
+a.for-educator {
+    text-decoration: none !important;
+}
+
+/* ── Critical page overflow fixes ── */
+.about.css-overrides .values-area,
+.values-area {
+    margin-top: 4rem !important;
+}
+
+.about.css-overrides .footer,
+.footer {
+    margin-top: 3rem !important;
+}
+
+.stories-grid {
+    width: min(1180px, 92%) !important;
+    margin-inline: auto !important;
+}
+
+.Learnivia-stories-text,
+.Learnivia-Stories-text {
+    color: #fff !important;
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+    font-weight: 700 !important;
+}
+
+.Learnivia-stories-world,
+.Learnivia-Stories-world {
+    color: rgba(255, 249, 242, 0.88) !important;
+    max-width: 36rem !important;
+    margin-inline: auto !important;
+}
+
+/* ── Responsive nav ── */
+@media (max-width: 1024px) {
+    .nav-main .about-1,
+    .nav-main .story-1 {
+        display: none !important;
+    }
+}
+
+@media (max-width: 860px) {
+    .nav-main .faq-1,
+    .nav-main .donate-1 {
+        display: none !important;
+    }
+
+    .top .brand-name {
+        font-size: 1.15rem !important;
+    }
+}
+
+@media (max-width: 680px) {
+    :root {
+        --nav-height: 64px;
+    }
+
+    .top {
+        grid-template-columns: 1fr auto !important;
+        grid-template-areas:
+            "brand actions"
+            "nav nav" !important;
+        height: auto !important;
+        min-height: var(--nav-height) !important;
+        max-height: none !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+        row-gap: 0.35rem !important;
+    }
+
+    .nav-main {
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+        padding-bottom: 0.15rem !important;
+    }
+
+    .nav-main::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .nav-main .index-1,
+    .nav-main .involve-1 {
+        display: inline-flex !important;
+        flex-shrink: 0 !important;
+    }
+
+    .nav-actions .signin-button {
+        display: none !important;
+    }
+
+    .nav-actions .signup-button {
+        display: inline-flex !important;
+        height: 34px !important;
+        padding: 0 0.85rem !important;
+        font-size: 0.75rem !important;
+    }
+
+    .explore-menu {
+        top: calc(var(--nav-height) + 28px) !important;
+    }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    .top {
+        background: #fff9f2 !important;
+        backdrop-filter: none !important;
+    }
+}

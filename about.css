@@ -615,8 +615,9 @@
 
 
 .values-area{
-  margin-top:1000px;
-  height:800px;
+  margin-top:4rem;
+  height:auto;
+  min-height:0;
   border-top: 0.01px solid rgb(197, 197, 197);
 }
 
@@ -1806,5 +1807,5 @@
     }
 }
 .footer{
-    margin-top: 2000px;
+    margin-top: 3rem;
 }
