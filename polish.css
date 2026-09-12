@@ -1,0 +1,607 @@
+/* Learnivia — production polish (homepage + shared sections) */
+
+:root {
+    --section-y: clamp(3.5rem, 7vw, 5.5rem);
+    --container: min(1180px, calc(100% - 3rem));
+}
+
+/* ── Shared container ── */
+.lv-container {
+    width: var(--container);
+    margin-inline: auto;
+}
+
+.page > *:not(.top):not(.explore-menu):not(.footer-nav) {
+    max-width: 100%;
+}
+
+/* ── Navigation ── */
+.top {
+    background: rgba(255, 252, 248, 0.97) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(23, 50, 77, 0.08) !important;
+    box-shadow: 0 1px 0 rgba(23, 50, 77, 0.04) !important;
+}
+
+.index-1,
+.about-1,
+.faq-1,
+.story-1,
+.involve-1,
+.donate-1,
+.signin-button {
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    color: var(--lv-text) !important;
+}
+
+.donate-1 {
+    border-width: 2px !important;
+    padding: 0.45rem 1rem !important;
+    border-radius: 999px !important;
+}
+
+/* ── Hero ── */
+.space {
+    display: grid !important;
+    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-areas:
+        "headline copy"
+        "avatars  copy";
+    align-items: center;
+    gap: 1.5rem 3rem;
+    width: 100%;
+    max-width: 100%;
+    min-height: min(88vh, 780px);
+    padding: calc(75px + 3rem) clamp(1.25rem, 5vw, 4rem) 3.5rem !important;
+    margin-top: 0 !important;
+    border-radius: 0 0 2rem 2rem;
+    box-sizing: border-box;
+}
+
+.space .bga-05__terrain,
+.space .bga-05__ridge {
+    opacity: 0.25 !important;
+}
+
+.front {
+    grid-area: headline;
+}
+
+.front2 {
+    grid-area: copy;
+}
+
+.imgs {
+    grid-area: avatars;
+    display: flex !important;
+    align-items: center;
+    gap: 0.35rem;
+    margin: 0 !important;
+}
+
+.front_text {
+    display: block;
+    font-size: clamp(2.35rem, 5.2vw, 4.35rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.03em !important;
+    color: #fff !important;
+    white-space: normal !important;
+}
+
+.front_text2 {
+    display: block;
+    margin-top: 0.65rem !important;
+    font-size: clamp(1.35rem, 2.8vw, 2rem) !important;
+    font-weight: 600 !important;
+    color: rgba(255, 249, 242, 0.88) !important;
+}
+
+.front_text3 {
+    color: rgba(255, 249, 242, 0.92) !important;
+    line-height: 1.55 !important;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.25rem;
+}
+
+.start-learning-button,
+.for-parents,
+.for-educator {
+    width: auto !important;
+    min-width: 0 !important;
+    flex: 1 1 140px;
+    max-width: 100%;
+    margin: 0 !important;
+    height: 46px !important;
+    border-radius: 999px !important;
+    font-size: 0.875rem !important;
+}
+
+.man,
+.Woman,
+.man2 {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    object-fit: cover;
+}
+
+/* ── Founder quote ── */
+.creator {
+    width: var(--container) !important;
+    max-width: var(--container) !important;
+    margin: var(--section-y) auto !important;
+    padding: 2rem 2.25rem !important;
+    border-radius: 1.25rem !important;
+    display: grid !important;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+        "avatar title"
+        "avatar quote"
+        "avatar author";
+    gap: 0.35rem 1.25rem;
+    align-items: start;
+}
+
+.diplome {
+    display: none !important;
+}
+
+.creator_text,
+.creator_text2 {
+    margin: 0 !important;
+    font-size: 1.15rem !important;
+    grid-area: title;
+}
+
+.creator_text2 {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+}
+
+.creator-profil {
+    grid-area: avatar;
+    width: 64px !important;
+    height: 64px !important;
+    margin: 0 !important;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    grid-area: quote;
+    font-size: 1.05rem !important;
+    line-height: 1.5 !important;
+    color: var(--lv-text-muted) !important;
+}
+
+.testimonial-author {
+    grid-area: author;
+    font-size: 0.9rem !important;
+    color: var(--lv-teal) !important;
+}
+
+.testimonial-publication {
+    display: none !important;
+}
+
+/* ── Programs (single cohesive block) ── */
+.programs-section {
+    width: 100%;
+    background:
+        radial-gradient(circle at 15% 0%, rgba(57, 166, 163, 0.12), transparent 35%),
+        linear-gradient(180deg, var(--lv-navy) 0%, var(--lv-navy-deep) 100%);
+    margin: 0;
+    padding: 0 0 var(--section-y);
+}
+
+.program2 {
+    padding: var(--section-y) clamp(1.25rem, 5vw, 4rem) 2rem !important;
+    text-align: center;
+    background: transparent !important;
+}
+
+.program2-inner {
+    width: var(--container);
+    margin-inline: auto;
+}
+
+.headphone-fox1 {
+    width: 72px !important;
+    height: 72px !important;
+    margin: 0 auto 1rem !important;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+}
+
+.ever-text {
+    margin: 0 auto 1.25rem !important;
+    max-width: 34rem;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    color: rgba(255, 249, 242, 0.82) !important;
+}
+
+.programs {
+    margin: 0 auto 0.75rem !important;
+    font-size: clamp(2rem, 4vw, 2.75rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.03em !important;
+    color: #fff !important;
+}
+
+.programs-2 {
+    margin: 0 auto !important;
+    max-width: 38rem;
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+    color: rgba(255, 249, 242, 0.78) !important;
+}
+
+.program {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.learning-section {
+    display: block !important;
+    width: var(--container) !important;
+    max-width: var(--container) !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+
+.left-content {
+    display: none !important;
+}
+
+.cards-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.25rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.learning-card {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+    padding: 1.75rem 1.5rem 1.5rem !important;
+    border-radius: 1.25rem !important;
+    background: var(--lv-surface) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+.learning-card h2 {
+    font-size: 1.35rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.learning-card li {
+    font-size: 0.9375rem !important;
+}
+
+.learning-card button {
+    margin-top: auto !important;
+    border-radius: 999px !important;
+    padding: 0.85rem 1rem !important;
+}
+
+/* ── Peer tutoring ── */
+.book-a {
+    display: none !important;
+}
+
+.peer {
+    width: var(--container) !important;
+    margin: var(--section-y) auto !important;
+    padding: 0 !important;
+    display: grid !important;
+    grid-template-columns: 1.1fr 0.9fr !important;
+    gap: 2.5rem !important;
+    align-items: center !important;
+}
+
+.the-video {
+    border-radius: 1.25rem !important;
+    overflow: hidden;
+    box-shadow: var(--lv-shadow-lg) !important;
+    background: var(--lv-navy-deep) !important;
+}
+
+.google-meet {
+    display: block;
+    width: 100% !important;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.peer-text {
+    font-size: clamp(1.65rem, 3vw, 2.35rem) !important;
+    line-height: 1.15 !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.something-text {
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.25rem !important;
+}
+
+.join-bootcamp {
+    width: auto !important;
+    min-width: 180px;
+    padding: 0 1.5rem !important;
+    border-radius: 999px !important;
+}
+
+/* ── Stories ── */
+.real-stories {
+    width: var(--container) !important;
+    margin: 0 auto var(--section-y) !important;
+    padding: 0 !important;
+    text-align: center;
+}
+
+.real-storytext {
+    font-size: clamp(1.75rem, 3vw, 2.5rem) !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.storytext {
+    margin-bottom: 2.5rem !important;
+}
+
+.stories-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+.story-card {
+    text-align: left;
+    padding: 1.5rem !important;
+    border-radius: 1.125rem !important;
+}
+
+/* ── Tutors ── */
+.meet,
+.tutor {
+    text-align: center;
+    width: var(--container);
+    margin-inline: auto;
+}
+
+.tutor {
+    margin-bottom: 1.5rem !important;
+}
+
+.tutor-videos-grid {
+    width: var(--container) !important;
+    margin: 0 auto var(--section-y) !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.25rem !important;
+}
+
+.student-video,
+.student-video2,
+.student-video3 {
+    height: 280px !important;
+    border-radius: 1.125rem !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+    padding: 1.25rem !important;
+    font-size: 0 !important;
+    color: transparent !important;
+    background:
+        linear-gradient(180deg, rgba(23, 50, 77, 0.05) 0%, rgba(23, 50, 77, 0.75) 100%),
+        linear-gradient(145deg, var(--lv-navy-mid), var(--lv-navy-deep)) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.student-video::after,
+.student-video2::after,
+.student-video3::after {
+    content: attr(data-label);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.student-video::before,
+.student-video2::before,
+.student-video3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(57, 166, 163, 0.25), transparent 55%);
+}
+
+/* ── How it works ── */
+.how-space {
+    width: var(--container) !important;
+    margin: 0 auto var(--section-y) !important;
+    padding: var(--section-y) 0 !important;
+    text-align: center;
+}
+
+.how-steps {
+    margin-top: 2.5rem !important;
+}
+
+/* ── Certification ── */
+.certification-wrap {
+    width: var(--container) !important;
+    margin: 0 auto var(--section-y) !important;
+    display: grid !important;
+    grid-template-columns: minmax(220px, 0.85fr) minmax(280px, 1.15fr) !important;
+    gap: 2rem !important;
+    align-items: center !important;
+    padding: 2rem !important;
+    border-radius: 1.25rem !important;
+    background: var(--lv-surface) !important;
+    border: 1px solid var(--lv-border) !important;
+    box-shadow: var(--lv-shadow-sm) !important;
+}
+
+.certification-image {
+    width: 100% !important;
+    max-width: 320px !important;
+    aspect-ratio: 1 !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    border-radius: 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0 !important;
+    color: transparent !important;
+    background:
+        radial-gradient(circle at 30% 25%, rgba(57, 166, 163, 0.35), transparent 50%),
+        linear-gradient(145deg, var(--lv-navy), var(--lv-navy-deep)) !important;
+}
+
+.certification-image::after {
+    content: "Portfolio";
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(255, 249, 242, 0.9);
+    letter-spacing: 0.04em;
+}
+
+.certification {
+    font-size: 1rem !important;
+    line-height: 1.65 !important;
+    color: var(--lv-text-muted) !important;
+}
+
+/* ── Blog + FAQ + footer spacing ── */
+.learnivia-blog {
+    width: var(--container) !important;
+    margin: 0 auto var(--section-y) !important;
+    padding: 0 !important;
+}
+
+.blog-grid {
+    gap: 1.25rem !important;
+}
+
+.learnivia-faq {
+    width: 100% !important;
+    padding: var(--section-y) clamp(1.25rem, 5vw, 4rem) !important;
+    margin: 0 !important;
+}
+
+.faq-inner {
+    width: var(--container) !important;
+}
+
+.footer-nav,
+.learnivia-footer {
+    width: 100% !important;
+}
+
+/* ── Subpages: shared spacing + nav ── */
+body.page > main,
+body.page > section:not(.explore-menu):not(.programs-section),
+.signin-page,
+.signup-page,
+.donate-hero,
+.hero,
+.debate-hero,
+.hero-stories,
+.tutor-hero,
+.workshops-hero {
+    max-width: 100%;
+}
+
+.signin-card,
+.signup-card {
+    border-radius: 1.25rem !important;
+}
+
+.faq-header {
+    padding-bottom: 2rem !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+    .space {
+        grid-template-columns: 1fr !important;
+        grid-template-areas:
+            "headline"
+            "copy"
+            "avatars" !important;
+        min-height: 0 !important;
+        padding-top: calc(75px + 2rem) !important;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .peer,
+    .certification-wrap {
+        grid-template-columns: 1fr !important;
+    }
+
+    .stories-container,
+    .tutor-videos-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .creator {
+        grid-template-columns: 1fr !important;
+        grid-template-areas:
+            "avatar"
+            "title"
+            "quote"
+            "author" !important;
+        text-align: center;
+    }
+
+    .creator-profil {
+        margin-inline: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .top {
+        justify-content: center !important;
+    }
+
+    .brand {
+        width: 100%;
+        justify-content: center;
+        margin-right: 0 !important;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .start-learning-button,
+    .for-parents,
+    .for-educator {
+        width: 100% !important;
+        flex: none !important;
+    }
+}
