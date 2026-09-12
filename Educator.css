@@ -736,7 +736,9 @@ body {
     background-repeat: no-repeat;
 }
 .tutor-note{
-  background:pink;
+  background:rgba(57, 166, 163, 0.15);
+  color:#17324D;
+  border:1px solid rgba(57, 166, 163, 0.35);
   border-radius:12px;
   height:35px;
   width:100px;
@@ -759,9 +761,11 @@ body {
 
 .become-a-tutor-text2{
   font-size:25px;
-  margin-left:650px;
-  margin-top:-200px;
-  width: 500px;
+  margin-left:0;
+  margin-top:0.75rem;
+  width: auto;
+  max-width: 560px;
+  text-align: center;
 }
 
 

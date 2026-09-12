@@ -1,0 +1,690 @@
+/* Learnivia — layout fixes (scroll, alignment, overflow) */
+
+html {
+    overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: clip;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ── Navigation: flex instead of pixel offsets ── */
+.top {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.35rem 1.1rem;
+    padding: 0 1.5rem !important;
+    height: auto !important;
+    min-height: 75px;
+}
+
+.brand {
+    margin-right: auto !important;
+}
+
+.index-1,
+.about-1,
+.faq-1,
+.story-1,
+.involve-1,
+.donate-1 {
+    position: static !important;
+    margin-left: 0 !important;
+}
+
+.signin-button,
+.signup-button {
+    flex-shrink: 0;
+}
+
+/* ── Hero ── */
+.space {
+    display: grid !important;
+    grid-template-columns: minmax(260px, 1fr) minmax(280px, 1fr);
+    gap: 2rem 3rem;
+    align-items: center;
+    height: auto !important;
+    min-height: 560px;
+    padding: 110px 6% 70px !important;
+    margin-top: 75px;
+}
+
+.front,
+.front2 {
+    position: relative !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+}
+
+.front_text {
+    word-spacing: normal !important;
+    font-size: clamp(2.4rem, 5.5vw, 5.2rem) !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    line-height: 1.05 !important;
+}
+
+.front_text2 {
+    margin-left: 0 !important;
+    font-size: clamp(1.6rem, 3vw, 3rem) !important;
+}
+
+.front_text3 {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 1.25rem !important;
+    font-size: clamp(1rem, 1.6vw, 1.35rem) !important;
+}
+
+.imgs {
+    position: relative !important;
+    margin: 1rem 0 0 !important;
+    height: auto !important;
+    width: auto !important;
+    grid-column: 1 / -1;
+}
+
+.man,
+.Woman,
+.man2 {
+    position: relative !important;
+    display: inline-block;
+    margin: 0.25rem !important;
+}
+
+.start-learning-button {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 0.75rem !important;
+}
+
+.for-parents,
+.for-educator {
+    position: static !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5rem 0.5rem 0 !important;
+    width: auto !important;
+    min-width: 140px;
+}
+
+/* ── Creator testimonial ── */
+.creator {
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 3rem auto !important;
+    max-width: min(920px, calc(100% - 2.5rem));
+    padding: 2.5rem 2rem 2rem !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.creator-profil {
+    display: inline-block !important;
+    margin: 0 0.75rem 0 0 !important;
+    vertical-align: middle;
+}
+
+.creator_text,
+.creator_text2,
+.creator_text3 {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+}
+
+.diplome {
+    position: absolute !important;
+    top: -1.5rem;
+    right: -1rem;
+}
+
+.testimonial-line {
+    display: none;
+}
+
+.testimonial-text,
+.testimonial-author,
+.testimonial-publication {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 0 !important;
+    max-width: 100%;
+}
+
+.testimonial-publication {
+    opacity: 0.5;
+}
+
+/* ── Programs block ── */
+.program2 {
+    position: relative !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 3.5rem 6% 2.5rem !important;
+    box-sizing: border-box;
+}
+
+.headphone-fox1 {
+    display: block !important;
+    margin: 0 auto 1.5rem !important;
+    margin-left: auto !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.ever-text,
+.programs,
+.programs-2,
+.program2-h1 {
+    margin-left: 0 !important;
+    max-width: 720px;
+}
+
+.programs {
+    font-size: clamp(2rem, 4.5vw, 3.4rem) !important;
+    margin-top: 0 !important;
+}
+
+.program {
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 3rem !important;
+    padding: 0 0 2rem !important;
+}
+
+.learning-section {
+    display: grid !important;
+    grid-template-columns: minmax(240px, 0.9fr) minmax(300px, 1.1fr);
+    gap: 2rem 3rem;
+    width: 100% !important;
+    max-width: 1180px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    padding: 0 6% 2rem !important;
+    box-sizing: border-box;
+}
+
+.left-content {
+    position: sticky !important;
+    top: 90px !important;
+    align-self: start;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+}
+
+.cards-container {
+    height: auto !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.25rem !important;
+}
+
+.learning-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    min-height: 0 !important;
+}
+
+.testimonial-card {
+    margin-top: 0 !important;
+    padding: 1.5rem !important;
+    border-radius: 1rem;
+    background: rgba(255, 252, 248, 0.08);
+}
+
+/* ── Peer tutoring section ── */
+.book-a {
+    position: static !important;
+    display: block;
+    margin: 1rem auto 0;
+    max-width: 120px;
+}
+
+.peer {
+    display: grid !important;
+    grid-template-columns: minmax(280px, 1.1fr) minmax(240px, 0.9fr);
+    gap: 2rem;
+    align-items: center;
+    max-width: 1180px;
+    margin: 2rem auto 3rem !important;
+    padding: 0 6%;
+    height: auto !important;
+    margin-top: 2rem !important;
+    border-bottom: none !important;
+    box-sizing: border-box;
+}
+
+.the-video {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+}
+
+.google-meet {
+    width: 100% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+}
+
+.the-text {
+    position: static !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+}
+
+.peer-text {
+    margin: 0 0 1rem !important;
+    width: auto !important;
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem) !important;
+}
+
+.something-text {
+    margin: 0 0 1.25rem !important;
+    width: auto !important;
+    margin-left: 0 !important;
+}
+
+.join-bootcamp {
+    position: static !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 !important;
+}
+
+/* ── Stories ── */
+.real-stories {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 6% 3rem;
+    box-sizing: border-box;
+}
+
+.stories-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+}
+
+/* ── Tutor videos ── */
+.tutor-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    max-width: 1180px;
+    margin: 1.5rem auto 3rem;
+    padding: 0 6%;
+    box-sizing: border-box;
+}
+
+.student-video,
+.student-video2,
+.student-video3 {
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 320px !important;
+    min-height: 220px;
+}
+
+/* ── How it works ── */
+.how-space {
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pick-up,
+.build-up,
+.join-up,
+.pick-up2,
+.build-text,
+.join-text {
+    position: static !important;
+    margin: 0 auto !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* ── Certification ── */
+.certification-wrap {
+    display: grid;
+    grid-template-columns: minmax(260px, 1fr) minmax(280px, 1fr);
+    gap: 2rem;
+    align-items: start;
+    max-width: 1180px;
+    margin: 2rem auto 3rem;
+    padding: 0 6%;
+    box-sizing: border-box;
+}
+
+.certification-image {
+    position: relative !important;
+    margin: 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 420px;
+    height: auto !important;
+    aspect-ratio: 1;
+}
+
+.certification {
+    position: relative !important;
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+/* ── Blog ── */
+.learnivia-blog {
+    width: 100% !important;
+    max-width: 1180px !important;
+    margin: 3rem auto 0 !important;
+    margin-left: auto !important;
+    padding: 3rem 6% 4rem !important;
+    box-sizing: border-box;
+}
+
+.blog-grid {
+    width: 100% !important;
+}
+
+/* ── FAQ (index accordion) ── */
+.learnivia-faq,
+.faq-inner {
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Footer ── */
+.footer-nav,
+.learnivia-footer,
+.footer-top,
+.footer-columns,
+.footer-bottom {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-columns {
+    padding: 0 1rem;
+}
+
+/* ── Inner page heroes ── */
+.hero,
+.about-hero,
+.tutor-hero,
+.workshops-hero {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto !important;
+    min-height: 420px;
+    padding: 110px 6% 60px !important;
+    margin-top: 75px;
+    box-sizing: border-box;
+}
+
+.hero-text1,
+.hero-text2,
+.become-a-tutor-text,
+.become-a-tutor-text2 {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    width: auto !important;
+    max-width: 720px !important;
+    text-align: center;
+}
+
+.become-a-tutor-text2 {
+    margin-top: 0.75rem !important;
+}
+
+.globe-fox {
+    margin: 1.5rem auto 0 !important;
+    height: auto !important;
+    max-height: 280px;
+}
+
+.debate-hero {
+    margin-right: 0 !important;
+    height: auto !important;
+    min-height: 420px;
+    padding: 110px 6% 60px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.dialogue-text,
+.dialogue-text2,
+.dialogue-text3,
+.join-dialogue {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    font-size: clamp(1.75rem, 4vw, 3.5rem) !important;
+    max-width: 900px;
+}
+
+.hero-stories {
+    width: calc(100% - 3rem) !important;
+    max-width: 1180px !important;
+    margin: 75px auto 2rem !important;
+    margin-left: auto !important;
+    height: auto !important;
+    min-height: 360px;
+}
+
+.donate-hero {
+    min-height: 0 !important;
+    padding-top: 110px !important;
+}
+
+.donate-intro {
+    margin-top: 0 !important;
+}
+
+/* ── FAQ help center page ── */
+.faq-header,
+.faq-content {
+    width: min(1150px, 92%) !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+}
+
+.faq-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+/* ── Sign in/up ── */
+.signin-page,
+.signup-page {
+    min-height: calc(100vh - 75px);
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    box-sizing: border-box;
+}
+
+.signin-decoration-left {
+    left: -20px !important;
+}
+
+.signin-decoration-right {
+    right: -20px !important;
+}
+
+/* ── SAT / workshops overflow hotspots ── */
+.how-it-works,
+.featured-story,
+.enroll-div,
+.sat-programs,
+.program-tabs,
+.community-section,
+.learnivia-blog,
+.values-area {
+    width: 100% !important;
+    max-width: 1180px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+}
+
+.community-section {
+    margin-left: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.partnership-text2,
+.partnership-buttons {
+    position: static !important;
+    left: auto !important;
+    margin-top: 1rem;
+}
+
+/* ── SAT tutoring page ── */
+.sat-tutoring .how-it-works,
+.sat-tutoring .featured-story,
+.sat-tutoring .enroll-div,
+.sat-tutoring .sat-programs,
+.sat-tutoring .program-tabs {
+    width: 100% !important;
+    max-width: 1180px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.sat-tutoring .front,
+.sat-tutoring .imgs {
+    position: relative !important;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+}
+
+.sat-tutoring .student-video,
+.sat-tutoring .student-video2,
+.sat-tutoring .student-video3 {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+    .space {
+        grid-template-columns: 1fr !important;
+        padding-top: 100px !important;
+    }
+
+    .learning-section {
+        grid-template-columns: 1fr !important;
+    }
+
+    .left-content {
+        position: static !important;
+    }
+
+    .peer,
+    .certification-wrap {
+        grid-template-columns: 1fr !important;
+    }
+
+    .tutor-videos-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .student-video,
+    .student-video2,
+    .student-video3 {
+        height: 260px !important;
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .diplome {
+        position: static !important;
+        margin: 0 auto 1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .top {
+        gap: 0.5rem;
+        padding: 0.75rem 1rem !important;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .faq-inner {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .stories-container {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+    }
+
+    .for-parents,
+    .for-educator {
+        width: calc(50% - 0.5rem) !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .space .bga-05__terrain,
+    .space .bga-05__ridge {
+        animation: none !important;
+    }
+}

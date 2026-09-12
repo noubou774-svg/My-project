@@ -1166,10 +1166,11 @@ body {
     }
 .community-section {
     position: relative;
-    width: 100vw;
-    margin-left: -600px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
     margin-top: 70px;
-    padding: 62px 40px 70px;
+    padding: 62px 6% 70px;
     box-sizing: border-box;
     background: #207a5d;
     overflow: hidden;

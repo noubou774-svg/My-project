@@ -950,9 +950,10 @@ body {
     overflow: visible;
     height: 380px;
     margin:
-        90px
-        200px
-        1400px;
+        3rem
+        auto
+        3rem;
+    max-width: min(920px, calc(100% - 2.5rem));
     border-radius: 25px;
     background:
         radial-gradient(
@@ -1047,10 +1048,10 @@ body {
         rgba(23, 50, 77, .30);
 }
 .program {
-    min-height: 2400px;
+    min-height: 0;
     border-radius: 20px;
-    margin-top: -100px;
-    margin-bottom:150px;
+    margin-top: 0;
+    margin-bottom: 3rem;
     padding:
         50px 8%;
     background: transparent}
@@ -1058,9 +1059,10 @@ body {
     position: relative;
     border-radius: 20px;
     height: 2000px;
-    width: 1330px;
-    margin-right: 100px;
-    margin-left: -100px;
+    width: 100%;
+    max-width: 1180px;
+    margin-right: auto;
+    margin-left: auto;
     display: grid;
     grid-template-columns:
         45% 55%;
@@ -1068,10 +1070,11 @@ body {
     overflow: visible;
 }
 .program2 {
-    position: absolute;
-    margin-top: -800px;
-    width: 1350px;
-    height: 2900px;
+    position: relative;
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    min-height: 0;
     padding: 50px 8%;
     border-radius: 20px;
     overflow: hidden;
@@ -1095,7 +1098,7 @@ body {
 }
 .left-content {
     position: sticky;
-    top: 59px;
+    top: 90px;
     width:800px;
     height: 100vh;
     display: flex;
@@ -1250,14 +1253,14 @@ body {
 
 
 .cards-container {
-    height: 200px;
+    height: auto;
     border-radius: 20px;
     padding:
         0px
         35px
         00px;
     display: flex;
-    margin-left: 100px;
+    margin-left: 0;
     flex-direction: column;
     background:transparent;
     gap: 0px;
@@ -1393,9 +1396,9 @@ body {
 .peer {
     border-bottom:
         .5px solid #B8C8D2;
-    height: 500px;
-    margin-top:-250px;
-    margin-bottom: 40px;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
     position: relative;
 }
 .book-a {
@@ -2025,18 +2028,20 @@ body {
     display:absolute;
 }
 .certification{
-    margin-top:-500px;
-    width:500px;
-    height:1500px;
-    margin-left: 800px;
+    margin-top: 0;
+    width: auto;
+    height: auto;
+    margin-left: 0;
     line-height: 2.5;
     font-weight:25px;
     display:absolute;
 }
 .learnivia-blog {
-    margin-top: -900px;
-    width: 1526px;
-    margin-left: -90px;
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
     padding:
         125px 8%
         110px;

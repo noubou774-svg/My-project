@@ -479,7 +479,7 @@ body {
 
 .donate-intro {
     max-width: 600px;
-    margin-top:-600px;
+    margin-top: 0;
 }
 
 .eyebrow,

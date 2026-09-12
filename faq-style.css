@@ -8,10 +8,15 @@
     padding: 0;
 }
 
+html {
+    overflow-x: clip;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #1f2933;
+    font-family: "Quicksand", sans-serif;
+    background: #FFF9F2;
+    color: #17324D;
+    overflow-x: clip;
 }
 
 
@@ -114,9 +119,10 @@ body {
 ========================= */
 
 .faq-card {
-    width: 1150px;;
-    height: 125px;
-    margin-left:-90px;
+    width: 100%;
+    height: auto;
+    min-height: 125px;
+    margin-left: 0;
     border: 2.5px solid #dddddd;
     border-radius: 7px;
 

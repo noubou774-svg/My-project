@@ -509,24 +509,30 @@ body {
 }
 
 .dialogue-text {
-    font-size: 80px;
+    font-size: clamp(1.75rem, 4vw, 3.5rem);
     font-weight: 800;
-    margin-top: 900px;
-    margin-left: 300px;
+    margin-top: 0;
+    margin-left: 0;
+    max-width: 900px;
+    color: #FFF9F2;
 }
 
 .dialogue-text2 {
-    font-size: 80px;
+    font-size: clamp(1.75rem, 4vw, 3.5rem);
     font-weight: 800;
-    margin-top: 600px;
-    margin-left: 300px;
+    margin-top: 0.5rem;
+    margin-left: 0;
+    max-width: 900px;
+    color: #FFF9F2;
 }
 
 .dialogue-text3 {
-    font-size: 80px;
+    font-size: clamp(1.75rem, 4vw, 3.5rem);
     font-weight: 800;
-    margin-top: 500px;
-    margin-left: 300px;
+    margin-top: 0.5rem;
+    margin-left: 0;
+    max-width: 900px;
+    color: #FFF9F2;
 }
 
 .join-dialogue {

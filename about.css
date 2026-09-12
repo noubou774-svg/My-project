@@ -452,31 +452,46 @@
 }
 
 .hero{
-  background-color:aquamarine;
-  height: 500px;
-    margin-top: 75px;
+  background:
+    radial-gradient(ellipse 70% 55% at 88% 12%, rgba(57, 166, 163, 0.28), transparent 52%),
+    linear-gradient(135deg, #1e4468 0%, #17324D 45%, #0f2438 100%);
+  height: auto;
+  min-height: 420px;
+  margin-top: 75px;
+  padding: 110px 6% 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
 }
 .hero-text1{
-  font-size: 90px;
-  width:650px;
-  margin-left:550px;
-  font-weight:bold;
-  margin-top:70px;
-  display:inline-block;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  width: auto;
+  max-width: 720px;
+  margin-left: 0;
+  font-weight: bold;
+  margin-top: 0;
+  display: block;
+  color: #FFF9F2;
 }
 
 .hero-text2{
-  font-size: 20px;
-  width:500px;
-  margin-left: 550px;
-  font-weight:bold;
-  margin-bottom:-300px;
-  display:absolute;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  width: auto;
+  max-width: 560px;
+  margin-left: 0;
+  font-weight: bold;
+  margin-bottom: 0;
+  display: block;
+  color: rgba(255, 249, 242, 0.9);
 }
 .globe-fox{
-    height:350px;
-    margin-left:75px;
-    margin-top:50px;
+    height: auto;
+    max-height: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
 }
 
 .diplome {
