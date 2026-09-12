@@ -1,0 +1,431 @@
+/* Learnivia — unified UI theme (loads last on every page) */
+
+:root {
+    --lv-navy: #17324D;
+    --lv-navy-deep: #0f2438;
+    --lv-navy-mid: #1e4468;
+    --lv-teal: #39A6A3;
+    --lv-teal-hover: #2d8f8c;
+    --lv-accent: #2fcaa3;
+    --lv-cream: #FFF9F2;
+    --lv-cream-soft: #F5EDE3;
+    --lv-surface: #FFFCF8;
+    --lv-gold: #F4C95D;
+    --lv-raspberry: #AD0062;
+    --lv-text: #17324D;
+    --lv-text-muted: #526A7A;
+    --lv-text-soft: #647582;
+    --lv-border: rgba(23, 50, 77, 0.10);
+    --lv-shadow-sm: 0 8px 24px rgba(23, 50, 77, 0.08);
+    --lv-shadow: 0 14px 40px rgba(23, 50, 77, 0.11);
+    --lv-shadow-lg: 0 22px 55px rgba(23, 50, 77, 0.14);
+    --lv-radius: 18px;
+    --lv-radius-lg: 28px;
+}
+
+/* ── Base ── */
+body {
+    font-family: "Quicksand", sans-serif !important;
+    color: var(--lv-text) !important;
+    background:
+        radial-gradient(ellipse 120% 80% at 50% -20%, rgba(57, 166, 163, 0.08), transparent 55%),
+        var(--lv-cream) !important;
+}
+
+.page {
+    background: transparent !important;
+}
+
+/* ── Nav ── */
+.top,
+.footer-nav {
+    background: rgba(255, 252, 248, 0.88) !important;
+    backdrop-filter: blur(16px) saturate(1.2) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(1.2) !important;
+    border-bottom-color: var(--lv-border) !important;
+    box-shadow: var(--lv-shadow-sm) !important;
+}
+
+.explore-menu {
+    background: rgba(255, 252, 248, 0.96) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+}
+
+/* ── Hero ── */
+.space {
+    background:
+        radial-gradient(ellipse 70% 55% at 88% 12%, rgba(57, 166, 163, 0.32), transparent 52%),
+        radial-gradient(ellipse 60% 45% at 8% 88%, rgba(244, 201, 93, 0.18), transparent 48%),
+        linear-gradient(135deg, var(--lv-navy-mid) 0%, var(--lv-navy) 45%, var(--lv-navy-deep) 100%) !important;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.06) !important;
+}
+
+.space::before {
+    background:
+        radial-gradient(circle, rgba(57, 166, 163, 0.22), transparent 68%) !important;
+}
+
+.space::after {
+    background:
+        radial-gradient(circle, rgba(244, 201, 93, 0.16), transparent 70%) !important;
+}
+
+.space .bga-05__terrain {
+    opacity: 0.45 !important;
+}
+
+.space .bga-05__ridge {
+    opacity: 0.28 !important;
+}
+
+.front_text2 {
+    color: rgba(255, 249, 242, 0.92) !important;
+}
+
+/* ── Creator / testimonial card ── */
+.creator {
+    background:
+        linear-gradient(145deg, var(--lv-surface), var(--lv-cream)) !important;
+    border: 1px solid var(--lv-border) !important;
+    box-shadow: var(--lv-shadow) !important;
+}
+
+.creator-text2-1 {
+    color: var(--lv-teal) !important;
+}
+
+/* ── Programs section ── */
+.program2 {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(57, 166, 163, 0.14), transparent 38%),
+        radial-gradient(circle at 88% 82%, rgba(244, 201, 93, 0.07), transparent 32%),
+        linear-gradient(165deg, var(--lv-navy-mid) 0%, var(--lv-navy) 55%, var(--lv-navy-deep) 100%) !important;
+    background-size: 100% 100% !important;
+}
+
+.left-content {
+    background: transparent !important;
+}
+
+.learning-card {
+    background: var(--lv-surface) !important;
+    border: 1px solid var(--lv-border) !important;
+    box-shadow: var(--lv-shadow-sm) !important;
+}
+
+.learning-card h2,
+.learning-card li {
+    color: var(--lv-text) !important;
+}
+
+.learning-card li::before {
+    color: var(--lv-gold) !important;
+}
+
+.learning-card button,
+.start-learning-button,
+.join-bootcamp,
+.signup-button {
+    background: var(--lv-navy) !important;
+    color: var(--lv-cream) !important;
+}
+
+.learning-card button:hover,
+.start-learning-button:hover,
+.join-bootcamp:hover,
+.signup-button:hover {
+    background: var(--lv-teal) !important;
+}
+
+.for-parents {
+    background: var(--lv-surface) !important;
+    color: var(--lv-text) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+}
+
+.for-parents:hover {
+    background: rgba(255, 252, 248, 0.12) !important;
+    color: var(--lv-cream) !important;
+    border-color: rgba(255, 249, 242, 0.55) !important;
+}
+
+.for-educator:hover {
+    background: var(--lv-surface) !important;
+    color: var(--lv-text) !important;
+}
+
+/* ── Stories / headings ── */
+.real-storytext,
+.meet,
+.peer-text,
+.How-text,
+.blog-header h2,
+.faq-heading h2 {
+    color: var(--lv-text) !important;
+}
+
+.storytext,
+.How-text2,
+.tutor,
+.something-text {
+    color: var(--lv-text-muted) !important;
+}
+
+.testimonial,
+.student-info strong {
+    color: var(--lv-text) !important;
+}
+
+.story-card {
+    padding: 28px 24px;
+    border-radius: var(--lv-radius);
+    background: var(--lv-surface);
+    border: 1px solid var(--lv-border);
+    box-shadow: var(--lv-shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--lv-shadow);
+}
+
+.stars {
+    color: var(--lv-gold) !important;
+}
+
+/* ── How it works ── */
+.how-space::before,
+.how-space::after {
+    background: rgba(57, 166, 163, 0.06) !important;
+}
+
+.how-step h3 {
+    color: var(--lv-text) !important;
+}
+
+.how-step p {
+    color: var(--lv-text-muted) !important;
+}
+
+/* ── Blog ── */
+.see-all-news {
+    background: rgba(57, 166, 163, 0.10) !important;
+    color: var(--lv-text) !important;
+}
+
+.see-all-news:hover {
+    background: var(--lv-teal) !important;
+    color: var(--lv-cream) !important;
+}
+
+.section-eyebrow,
+.blog-meta span {
+    color: var(--lv-teal) !important;
+}
+
+/* ── FAQ (index accordion) ── */
+.learnivia-faq {
+    background: transparent !important;
+    border-top-color: var(--lv-border) !important;
+}
+
+.faq-question {
+    color: var(--lv-text) !important;
+}
+
+.faq-question:hover {
+    color: var(--lv-teal) !important;
+}
+
+.faq-item.active .faq-plus {
+    color: var(--lv-raspberry) !important;
+}
+
+/* ── FAQ page ── */
+.faq-header {
+    background:
+        linear-gradient(135deg, var(--lv-navy-mid), var(--lv-navy-deep)) !important;
+}
+
+.faq-card {
+    border-color: var(--lv-border) !important;
+    border-radius: var(--lv-radius) !important;
+    box-shadow: var(--lv-shadow-sm) !important;
+}
+
+.faq-card:hover {
+    border-color: var(--lv-teal) !important;
+    box-shadow: var(--lv-shadow) !important;
+}
+
+.faq-card:hover .faq-card-text span,
+.faq-icon {
+    color: var(--lv-teal) !important;
+}
+
+/* ── Auth pages ── */
+.signin-page,
+.signup-page {
+    background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(57, 166, 163, 0.10), transparent 55%),
+        linear-gradient(180deg, var(--lv-cream) 0%, var(--lv-cream-soft) 100%) !important;
+}
+
+.signin-card,
+.signup-card {
+    background: var(--lv-surface) !important;
+    border: 1px solid var(--lv-border) !important;
+    border-radius: var(--lv-radius-lg) !important;
+    box-shadow: var(--lv-shadow) !important;
+}
+
+.signin-submit,
+.signup-submit {
+    background: var(--lv-navy) !important;
+}
+
+.signin-submit:hover,
+.signup-submit:hover {
+    background: var(--lv-teal) !important;
+}
+
+.forgot-password,
+.signup-text a {
+    color: var(--lv-teal) !important;
+}
+
+.google-signin {
+    border: 1px solid var(--lv-border) !important;
+    background: var(--lv-surface) !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.google-signin:hover {
+    border-color: var(--lv-teal) !important;
+    box-shadow: var(--lv-shadow-sm);
+}
+
+/* ── Footer ── */
+.learnivia-footer {
+    background: linear-gradient(180deg, var(--lv-navy) 0%, var(--lv-navy-deep) 100%) !important;
+}
+
+.footer-signup {
+    background: var(--lv-accent) !important;
+    color: var(--lv-navy) !important;
+}
+
+.footer-donate {
+    border-color: var(--lv-navy) !important;
+}
+
+/* ── Buttons & links ── */
+.signin-button:hover,
+.about-1:hover,
+.faq-1:hover,
+.story-1:hover,
+.involve-1:hover,
+.donate-1:hover {
+    color: var(--lv-teal) !important;
+}
+
+.donate-1:hover {
+    border-color: var(--lv-teal) !important;
+}
+
+.explore-item h3 {
+    color: var(--lv-text) !important;
+}
+
+.explore-item p {
+    color: var(--lv-text-muted) !important;
+}
+
+.explore-item:hover h3 {
+    color: var(--lv-teal) !important;
+}
+
+/* ── Video / media blocks ── */
+.the-video,
+.student-video,
+.student-video2,
+.student-video3 {
+    background: linear-gradient(145deg, var(--lv-navy), var(--lv-navy-mid)) !important;
+    box-shadow: var(--lv-shadow) !important;
+}
+
+.certification-image {
+    background: linear-gradient(145deg, var(--lv-navy-deep), var(--lv-navy)) !important;
+    border-radius: var(--lv-radius) !important;
+}
+
+/* ── Inner-page heroes (fix broken solid colors) ── */
+.hero,
+.about-hero {
+    background:
+        radial-gradient(ellipse 70% 55% at 88% 12%, rgba(57, 166, 163, 0.28), transparent 52%),
+        radial-gradient(ellipse 60% 45% at 8% 88%, rgba(244, 201, 93, 0.14), transparent 48%),
+        linear-gradient(135deg, var(--lv-navy-mid) 0%, var(--lv-navy) 45%, var(--lv-navy-deep) 100%) !important;
+}
+
+.hero-text1,
+.hero-text2 {
+    color: var(--lv-cream) !important;
+}
+
+.debate-hero {
+    background:
+        linear-gradient(135deg, rgba(23, 50, 77, 0.72), rgba(30, 68, 104, 0.55)),
+        url("debate-bg.jpg") center / cover no-repeat !important;
+}
+
+.hero-stories {
+    background:
+        radial-gradient(circle at 20% 30%, rgba(173, 0, 98, 0.35), transparent 45%),
+        radial-gradient(circle at 80% 70%, rgba(57, 166, 163, 0.25), transparent 40%),
+        linear-gradient(145deg, #8b2456 0%, var(--lv-navy) 55%, var(--lv-navy-deep) 100%) !important;
+}
+
+.hero-stories::after {
+    background: rgba(244, 201, 93, 0.18) !important;
+}
+
+.donate-hero {
+    background:
+        radial-gradient(circle at 15% 30%, rgba(57, 166, 163, 0.12), transparent 30%),
+        radial-gradient(circle at 85% 75%, rgba(244, 201, 93, 0.12), transparent 28%),
+        var(--lv-cream) !important;
+}
+
+/* ── Cards & content panels on subpages ── */
+.content-card,
+.info-card,
+.tutor-card,
+.workshop-card,
+.program-card {
+    background: var(--lv-surface) !important;
+    border: 1px solid var(--lv-border) !important;
+    box-shadow: var(--lv-shadow-sm) !important;
+    border-radius: var(--lv-radius) !important;
+}
+
+.tutor-note {
+    background: rgba(57, 166, 163, 0.15) !important;
+    color: var(--lv-navy) !important;
+    border: 1px solid rgba(57, 166, 163, 0.35) !important;
+}
+
+.tutor-hero {
+    background:
+        linear-gradient(135deg, rgba(23, 50, 77, 0.75), rgba(30, 68, 104, 0.6)),
+        var(--lv-navy-mid) !important;
+}
+
+.sat-tutoring .for-parents,
+.sat-tutoring .for-educator {
+    background: var(--lv-surface) !important;
+    color: var(--lv-text) !important;
+    border: 1px solid var(--lv-border) !important;
+}
