@@ -1,0 +1,379 @@
+/* SAT Tutoring page — layout overrides (loads last) */
+
+body.sat-tutoring .top .index-1,
+body.sat-tutoring .top .about-1,
+body.sat-tutoring .top .faq-1,
+body.sat-tutoring .top .story-1,
+body.sat-tutoring .top .involve-1,
+body.sat-tutoring .top .donate-1 {
+    position: static !important;
+    margin: 0 !important;
+}
+
+/* ── Hero ── */
+body.sat-tutoring .space {
+    display: grid !important;
+    grid-template-columns: minmax(260px, 1.05fr) minmax(300px, 0.95fr) !important;
+    grid-template-areas:
+        "headline avatars"
+        "headline copy" !important;
+    align-items: start !important;
+    gap: 1.5rem 3rem !important;
+    height: auto !important;
+    min-height: 560px !important;
+    padding: calc(var(--nav-height, 72px) + 2rem) 6% 3.5rem !important;
+    box-sizing: border-box !important;
+}
+
+body.sat-tutoring .front {
+    grid-area: headline !important;
+    margin: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+}
+
+body.sat-tutoring .front_text {
+    display: block !important;
+    margin: 0 !important;
+    word-spacing: normal !important;
+    letter-spacing: -0.03em !important;
+    font-size: clamp(2.5rem, 5.5vw, 5rem) !important;
+    line-height: 1.02 !important;
+    color: #382727 !important;
+}
+
+body.sat-tutoring .front_text3,
+body.sat-tutoring .hero-lead,
+body.sat-tutoring .hero-partnership,
+body.sat-tutoring .hero-subcopy {
+    color: rgba(56, 39, 39, 0.92) !important;
+}
+
+body.sat-tutoring .imgs {
+    grid-area: avatars !important;
+    position: relative !important;
+    margin: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    display: flex !important;
+    gap: 0.35rem !important;
+    justify-self: end !important;
+    align-self: start !important;
+}
+
+body.sat-tutoring .man,
+body.sat-tutoring .Woman,
+body.sat-tutoring .man2 {
+    position: relative !important;
+    margin: 0 !important;
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 2px solid rgba(255, 252, 248, 0.9) !important;
+    box-shadow: 0 4px 14px rgba(23, 50, 77, 0.12) !important;
+}
+
+body.sat-tutoring .front2 {
+    grid-area: copy !important;
+    margin: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+}
+
+body.sat-tutoring .front_text3,
+body.sat-tutoring .hero-lead {
+    margin: 0 0 0.75rem !important;
+    font-size: clamp(1rem, 1.6vw, 1.25rem) !important;
+    line-height: 1.5 !important;
+}
+
+body.sat-tutoring .hero-stat {
+    font-size: 1.15em;
+    font-weight: 700;
+    color: var(--lv-navy, #17324D);
+}
+
+body.sat-tutoring .hero-partnership {
+    margin: 0 0 0.75rem !important;
+    font-size: 0.95rem !important;
+    color: rgba(56, 39, 39, 0.85) !important;
+}
+
+body.sat-tutoring .hero-subcopy {
+    margin: 0 0 1.25rem !important;
+    max-width: 34rem !important;
+    line-height: 1.55 !important;
+    font-size: 0.95rem !important;
+    color: rgba(56, 39, 39, 0.88) !important;
+}
+
+body.sat-tutoring .hero-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.65rem !important;
+}
+
+body.sat-tutoring .for-parents,
+body.sat-tutoring .for-educator {
+    position: static !important;
+    margin: 0 !important;
+    width: auto !important;
+    min-width: 148px !important;
+    height: 46px !important;
+}
+
+/* ── Enroll + sections ── */
+body.sat-tutoring .enroll-div {
+    width: 100% !important;
+    max-width: 1180px !important;
+    height: auto !important;
+    margin: 3rem auto !important;
+    padding: 0 6% !important;
+    border-bottom: none !important;
+}
+
+body.sat-tutoring .how-it-works,
+body.sat-tutoring .featured-story,
+body.sat-tutoring .free-tutoring,
+body.sat-tutoring .real-stories,
+body.sat-tutoring .educator-safety,
+body.sat-tutoring .learnivia-faq {
+    width: 100% !important;
+    max-width: 1180px !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
+
+body.sat-tutoring .how-it-works {
+    padding: 3rem 6% !important;
+    gap: 2.5rem !important;
+}
+
+body.sat-tutoring .google-text {
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
+    color: #667085;
+}
+
+body.sat-tutoring .google-text strong {
+    font-size: 1rem;
+    color: #382727;
+}
+
+body.sat-tutoring .stat-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    border-radius: 0.5rem !important;
+    background: rgba(187, 81, 81, 0.12) !important;
+    font-size: 1rem !important;
+}
+
+body.sat-tutoring .stat-icon:empty::before {
+    content: "◆";
+}
+
+/* ── Certified tutors ── */
+body.sat-tutoring .meet,
+body.sat-tutoring .tutor {
+    width: min(1180px, 92%) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+body.sat-tutoring .tutor-videos-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.25rem !important;
+    width: min(1180px, 92%) !important;
+    margin: 1.5rem auto 3rem !important;
+}
+
+body.sat-tutoring .student-video,
+body.sat-tutoring .student-video2,
+body.sat-tutoring .student-video3 {
+    margin: 0 !important;
+    width: 100% !important;
+    height: 280px !important;
+    font-size: 0 !important;
+    color: transparent !important;
+}
+
+/* ── Peer tutoring / Zoom-style video ── */
+body.sat-tutoring .peer {
+    display: grid !important;
+    grid-template-columns: 1.1fr 0.9fr !important;
+    gap: 2.5rem !important;
+    align-items: center !important;
+    width: min(1180px, 92%) !important;
+    height: auto !important;
+    margin: 3rem auto !important;
+    padding: 0 !important;
+    position: relative !important;
+}
+
+body.sat-tutoring .book-a {
+    display: none !important;
+}
+
+body.sat-tutoring .the-video {
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 1.25rem !important;
+    overflow: hidden !important;
+    box-shadow: 0 20px 45px rgba(23, 50, 77, 0.16) !important;
+}
+
+body.sat-tutoring .google-meet {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    aspect-ratio: 16 / 10 !important;
+    object-fit: cover !important;
+    border-radius: 1.25rem !important;
+}
+
+body.sat-tutoring .the-text {
+    margin: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+}
+
+body.sat-tutoring .peer-text {
+    margin: 0 !important;
+    width: auto !important;
+    font-size: clamp(1.75rem, 3vw, 2.5rem) !important;
+    line-height: 1.15 !important;
+}
+
+body.sat-tutoring .something-text {
+    margin: 0 !important;
+    width: auto !important;
+    max-width: 28rem !important;
+}
+
+body.sat-tutoring .join-bootcamp {
+    position: static !important;
+    width: auto !important;
+    max-width: 240px !important;
+    margin: 0 !important;
+    height: 46px !important;
+}
+
+body.sat-tutoring .educator-label {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #267f70;
+    margin-bottom: 0.75rem;
+}
+
+body.sat-tutoring .safety-title h2 {
+    margin: 0 0 0.5rem !important;
+}
+
+/* ── Footer ── */
+body.sat-tutoring .learnivia-footer {
+    margin-top: 0 !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+body.sat-tutoring .footer {
+    margin-top: 3rem !important;
+}
+
+/* ── Creator card (about-style overlap fix on pages that include it) ── */
+.creator {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    grid-template-areas:
+        "avatar title"
+        "avatar subtitle"
+        "quote quote"
+        "author author" !important;
+    align-items: center !important;
+    gap: 0.35rem 1rem !important;
+    padding: 2rem 2rem 2rem 5.5rem !important;
+}
+
+.creator-profil {
+    grid-area: avatar !important;
+    position: relative !important;
+    display: block !important;
+    margin: 0 !important;
+    width: 64px !important;
+    height: 64px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}
+
+.creator_text {
+    grid-area: title !important;
+    margin: 0 !important;
+    font-size: 1.25rem !important;
+}
+
+.creator_text2 {
+    grid-area: subtitle !important;
+    margin: 0 !important;
+}
+
+.creator_text3,
+.testimonial-line,
+.testimonial-text,
+.testimonial-author,
+.testimonial-publication {
+    grid-column: 1 / -1 !important;
+    margin-left: 0 !important;
+}
+
+.diplome {
+    position: absolute !important;
+    top: -1rem !important;
+    right: 1rem !important;
+    width: 72px !important;
+    height: auto !important;
+}
+
+@media (max-width: 900px) {
+    body.sat-tutoring .space {
+        grid-template-columns: 1fr !important;
+        grid-template-areas:
+            "headline"
+            "avatars"
+            "copy" !important;
+    }
+
+    body.sat-tutoring .imgs {
+        justify-self: start !important;
+    }
+
+    body.sat-tutoring .peer {
+        grid-template-columns: 1fr !important;
+    }
+
+    body.sat-tutoring .tutor-videos-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    body.sat-tutoring .how-it-works {
+        grid-template-columns: 1fr !important;
+    }
+}
