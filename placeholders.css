@@ -1,0 +1,16 @@
+/* Fallback styling when program/icon images are missing */
+.program-image img,
+.Volunteer-image img,
+img.student-photo,
+img[src*="sat.png"],
+img[src*="dialogues.png"],
+img[src*="college.png"],
+img[src*="homework.png"] {
+    object-fit: cover;
+    background: linear-gradient(145deg, rgba(57, 166, 163, 0.15), rgba(23, 50, 77, 0.08));
+}
+
+img.is-placeholder {
+    object-fit: cover;
+    background: linear-gradient(145deg, #39A6A3, #17324D);
+}

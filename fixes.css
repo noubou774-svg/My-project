@@ -86,6 +86,58 @@
     display: none;
 }
 
+/* Parent volunteer section layout */
+.Volunteer-content {
+    display: grid !important;
+    grid-template-columns: minmax(220px, 0.9fr) minmax(280px, 1.1fr) !important;
+    gap: 2rem 2.5rem !important;
+    width: min(1180px, 92%) !important;
+    margin-inline: auto !important;
+    align-items: start !important;
+}
+
+.Volunteer-cards {
+    grid-column: 1 / -1 !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 1.25rem !important;
+}
+
+.Volunteer-item {
+    position: relative !important;
+    margin: 0 !important;
+    display: block !important;
+    text-decoration: none !important;
+    color: inherit !important;
+    padding: 1.25rem !important;
+    border-radius: 1rem !important;
+    border: 1px solid rgba(23, 50, 77, 0.08) !important;
+    background: #fff !important;
+}
+
+.Volunteer-image img {
+    width: 100% !important;
+    max-height: 160px !important;
+    object-fit: cover !important;
+    border-radius: 0.75rem !important;
+}
+
+.learning-card .btn-primary,
+.register-button,
+.share-your-story-button,
+.see-more-button,
+.Volunteer-button {
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+a.register-button {
+    width: auto !important;
+    min-width: 120px !important;
+}
+
 .space .for-parents,
 .space .for-educator,
 .front2 .for-parents,

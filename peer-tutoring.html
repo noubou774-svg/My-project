@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Help - Learnivia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="polish.css">
+    <link rel="stylesheet" href="emil.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="fixes.css">
+<link rel="stylesheet" href="placeholders.css">
+    <style>
+        .hw-hero {
+            margin-top: var(--nav-height, 72px);
+            padding: 4rem 6% 3rem;
+            max-width: 1180px;
+            margin-inline: auto;
+        }
+        .hw-hero h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--lv-navy, #17324D); margin-bottom: 1rem; }
+        .hw-hero p { max-width: 40rem; line-height: 1.6; color: rgba(23, 50, 77, 0.85); margin-bottom: 1.5rem; }
+        .hw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 2rem; }
+        .hw-card { padding: 1.25rem; border-radius: 1rem; border: 1px solid rgba(23, 50, 77, 0.08); background: #fff; }
+    </style>
+</head>
+<body class="page">
+<div class="top">
+<a href="index.html" class="brand">
+<img class="fox" src="image_1.jpg/fox.jpeg" alt="Learnivia logo">
+<span class="brand-name">Learnivia</span>
+</a>
+<nav class="nav-main" aria-label="Main">
+<div class="index-1" role="button" tabindex="0" aria-expanded="false">Explore programs <span class="triangle" aria-hidden="true"></span></div>
+<a href="about.html" class="about-1">About</a>
+<a href="faq.html" class="faq-1">FAQ</a>
+<a href="stories.html" class="story-1">Stories</a>
+<div class="involve-1" role="button" tabindex="0" aria-expanded="false">Get involved <span class="triangle" aria-hidden="true"></span></div>
+<a href="donate.html" class="donate-1">Donate</a>
+</nav>
+<div class="nav-actions">
+<a href="signin.html" class="signin-button">Sign in</a>
+<a href="signup.html" class="signup-button">Sign up</a>
+</div>
+</div>
+<main class="hw-hero">
+    <h1>Homework Help</h1>
+    <p>Get unstuck on any subject, anytime. Connect with peer tutors for free sessions in a supportive online environment.</p>
+    <a href="signup.html" class="btn-primary">Get homework help</a>
+    <div class="hw-grid">
+        <div class="hw-card"><strong>Math &amp; Science</strong><p>Algebra, calculus, biology, chemistry, and more.</p></div>
+        <div class="hw-card"><strong>Writing &amp; Reading</strong><p>Essays, grammar, literature, and research help.</p></div>
+        <div class="hw-card"><strong>Test prep</strong><p>SAT®, AP®, and classroom exam support.</p></div>
+    </div>
+</main>
+<script src="motion.js" defer></script>
+<script src="site-interactions.js" defer></script>
+</body>
+</html>
