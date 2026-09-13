@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Learnivia</title>
+<title>Blog - Learnivia</title>
 <link rel="stylesheet" href="blog.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -1029,65 +1029,6 @@ document.addEventListener("click", event => {
     if (!event.target.closest(".top") && !event.target.closest(".explore-menu")) closeDropdowns();
 });
 </script>
-<script>
-document.querySelectorAll(".faq-question").forEach(
-    (button) => {
-        button.addEventListener(
-            "click",
-            () => {
-                const item =
-                    button.closest(".faq-item");
-                const wasOpen =
-                    item.classList.contains("active");
-                document
-                    .querySelectorAll(".faq-item")
-                    .forEach(
-                        (otherItem) => {
-                            otherItem.classList.remove(
-                                "active"
-                            );
-                        }
-                    );
-                if (!wasOpen) {
-                    item.classList.add(
-                        "active"
-                    );
-                }
-            }
-        );
-    }
-);
-
-const exploreButton =
-document.querySelector(".index-1");
-
-const involveButton =
-document.querySelector(".involve-1");
-
-const menu =
-document.querySelector(".explore-menu");
-
-
-exploreButton.addEventListener("click", () => {
-
-    menu.classList.toggle("open");
-
-    exploreButton.classList.toggle("active");
-
-});
-
-
-involveButton.addEventListener("click", () => {
-
-    menu.classList.toggle("open");
-
-    involveButton.classList.toggle("active");
-
-});
-
-
-</script>
-
 
 <script src="motion.js" defer></script>
 <script src="site-interactions.js" defer></script>

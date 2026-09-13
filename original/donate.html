@@ -1,0 +1,462 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="donate.css">
+<meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Learnivia</title>
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <title>Donate - Learnivia</title>
+</head>
+
+<body class="page">
+<div class="top">
+    <a
+        href="index.html"
+        class="brand"
+    >
+        <img
+            class="fox"
+            src="image_1.jpg/fox.jpeg"
+            alt="Learnivia logo"
+        >
+              <span class="brand-name">Learnivia</span>
+    </a>
+    <div
+        class="index-1"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+    >
+        explore programs
+        <span class="triangle">
+            &#9652;
+        </span>
+    </div>
+    <a
+        href="about.html"
+        class="about-1"
+    >
+        About
+    </a>
+    <a
+        href="faq.html"
+        class="faq-1"
+    >
+        FAQ
+    </a>
+    <a
+        href="stories.html"
+        class="story-1"
+    >
+        Stories
+    </a>
+    <div
+        class="involve-1"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+    >
+        Get involved
+        <span class="triangle">
+            &#9652;
+        </span>
+    </div>
+    <a
+        href="donate.html"
+        class="donate-1"
+    >
+        Donate
+    </a>
+    <a
+        href="signin.html"
+        class="signin-button"
+    >
+        Sign in
+    </a>
+    <a
+        href="signup.html"
+        class="signup-button"
+    >
+        Sign up
+    </a>
+</div>
+<div class="explore-menu" aria-hidden="true">
+    <div class="explore-menu-content">
+        <section class="dropdown-panel explore-programs-panel">
+            <div class="explore-menu-header">
+                <h2>Explore programs</h2>
+                <p>Find the program that's right for you.</p>
+            </div>
+            <div class="explore-menu-list">
+                <a class="explore-item" href="sat-tutoring.html">
+                    <h3>Official SAT® Tutoring</h3>
+                    <p>Improve your score with our free SAT® Bootcamps in partnership with CollegeBoard</p>
+                </a>
+                <a class="explore-item" href="debate.html">
+                    <h3>Dialogues</h3>
+                    <p>One-on-one conversations with students around the globe</p>
+                </a>
+                <a class="explore-item" href="workshops.html">
+                    <h3>College Admissions Workshops</h3>
+                    <p>Navigate the college application process</p>
+                </a>
+                <a class="explore-item" href="peer-tutoring.html">
+                    <h3>Homework Help</h3>
+                    <p>Get unstuck on any subject, anytime</p>
+                </a>
+            </div>
+        </section>
+
+        <div class="get-involved-menu">
+            <section class="dropdown-panel get-involved-panel">
+                <div class="explore-menu-header">
+                    <h2>Get involved</h2>
+                    <p>Choose how you would like to be part of Learnivia.</p>
+                </div>
+                <div class="explore-menu-list">
+                    <a class="explore-item" href="become-tutor.html">
+                        <h3>Become a Tutor </h3>
+                        <p>.Share your knowledge, support other students, and grow as a peer tutor.</p>
+                    </a>
+                    <a class="explore-item" href="parent.html">
+                        <h3>Parent</h3>
+                        <p>Discover ways to support your student's learning and progress.</p>
+                    </a>
+                    <a class="explore-item" href="partnerships.html">
+                        <h3>Partnership</h3>
+                        <p>Partner with Learnivia to help create more learning opportunities for students.</p>
+                    </a>
+                    <a class="explore-item" href="Educator.html">
+                        <h3>Educator</h3>
+                        <p>Share your knowledge, support students, and help create meaningful learning experiences</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<main>
+
+<section class="donate-hero">
+
+    <div class="donate-intro">
+        <span class="eyebrow">SUPPORT LEARNIVIA</span>
+        <h1>Help make learning<br>more accessible.</h1>
+        <p>
+            Your support helps us create free learning opportunities,
+            connect students with tutors, and give learners the confidence
+            to reach their goals.
+        </p>
+    </div>
+
+    <div class="donation-card">
+
+        <h2>Donate now to help learners<br>around the world</h2>
+
+        <label class="field-label">Donation Amount</label>
+
+        <div class="donation-amounts">
+            <button type="button" class="amount-button" data-amount="25">$25</button>
+            <button type="button" class="amount-button" data-amount="50">$50</button>
+            <button type="button" class="amount-button" data-amount="100">$100</button>
+            <button type="button" class="amount-button" data-amount="250">$250</button>
+            <button type="button" class="amount-button" data-amount="500">$500</button>
+
+            <label class="custom-amount">
+                <span>$</span>
+                <input type="number" id="customAmount" min="1" placeholder="Other">
+            </label>
+        </div>
+
+        <label class="field-label" for="frequency">
+            <span class="required">*</span>
+            Select Donation Frequency
+        </label>
+
+        <select id="frequency">
+            <option value="once">One-time</option>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+        </select>
+
+        <label class="field-label" for="donor-note">
+            Your Note for the Donor Scroll
+        </label>
+
+        <textarea
+            id="donor-note"
+            maxlength="150"
+            placeholder="Write a public note about why you're choosing to give!"
+        ></textarea>
+
+        <div class="character-count">
+            <span id="characterCount">0</span> / 150
+        </div>
+
+        <div class="donation-options">
+
+            <label class="check-option">
+                <input type="checkbox" checked>
+                <span>Post my donation amount</span>
+            </label>
+
+            <label class="check-option">
+                <input type="checkbox" checked>
+                <span>Post my name</span>
+            </label>
+
+        </div>
+
+        <label class="field-label" for="honor">
+            Honor or remember someone with your gift?
+        </label>
+
+        <select id="honor">
+            <option value="no">No</option>
+            <option value="yes">Honor</option>
+            <option value="memorial">Memorial</option>
+        </select>
+
+        <button type="button" class="donate-button" id="donateButton">
+            Donate Once
+        </button>
+
+        <div class="share-section">
+            <span>SHARE:</span>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="X">𝕏</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Email">✉</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="mission-section">
+
+    <div class="mission-content">
+
+        <div class="mission-text">
+
+            <span class="section-label">OUR MISSION</span>
+
+            <h2>Connecting the world through learning</h2>
+
+            <p>
+                Learnivia is built around a simple idea: every student should
+                have access to meaningful learning opportunities, regardless
+                of where they live or what resources they have.
+            </p>
+
+            <p>
+                Through free tutoring, educational programs, workshops,
+                and peer-to-peer learning, we help students develop their
+                skills while connecting with people who can support their
+                journey.
+            </p>
+
+            <p>
+                Your donation helps us continue creating accessible learning
+                experiences and reach more learners with the support they need
+                to learn, grow, and move forward.
+            </p>
+
+            <div class="mission-stats">
+
+                <div class="mission-stat">
+                    <strong>205K+</strong>
+                    <span>Learners reached</span>
+                </div>
+
+                <div class="mission-stat">
+                    <strong>150+</strong>
+                    <span>Countries</span>
+                </div>
+
+                <div class="mission-stat">
+                    <strong>100%</strong>
+                    <span>Free learning</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <aside class="supporters-card">
+
+            <div class="supporters-header">
+                <h3>Our supporters</h3>
+                <span>♡</span>
+            </div>
+
+            <div class="supporter">
+
+                <div class="supporter-top">
+                    <strong>Andrea Brizuela</strong>
+                    <b>$5</b>
+                </div>
+
+                <p>
+                    Donation sent to make this world a better place
+                    and create opportunities for everyone.
+                </p>
+
+                <span class="supporter-time">Recently</span>
+
+            </div>
+
+            <div class="supporter">
+
+                <div class="supporter-top">
+                    <strong>Anonymous</strong>
+                    <b>$25</b>
+                </div>
+
+                <p>
+                    It's a great tool. Students who are in need
+                    will be greatly benefited by it.
+                </p>
+
+                <span class="supporter-time">Recently</span>
+
+            </div>
+
+            <div class="supporter">
+
+                <div class="supporter-top">
+                    <strong>Anonymous</strong>
+                    <b>$500</b>
+                </div>
+
+                <p>
+                    I donated in support of this campaign.
+                </p>
+
+                <span class="supporter-time">Recently</span>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+<section class="donation-message">
+
+    <div>
+        <span class="section-label">EVERY GIFT MATTERS</span>
+        <h2>Small contributions can create meaningful opportunities.</h2>
+    </div>
+
+    <a href="signup.html" class="message-button">
+        Start learning
+    </a>
+
+</section>
+
+</main><script>
+const menu = document.querySelector(".explore-menu");
+const nav = document.querySelector(".top");
+const dropdowns = document.querySelectorAll(".index-1, .involve-1");
+const panels = {
+    "index-1": document.querySelector(".explore-programs-panel"),
+    "involve-1": document.querySelector(".get-involved-panel")
+};
+
+function closeDropdowns() {
+    dropdowns.forEach(item => {
+        item.classList.remove("open");
+        item.setAttribute("aria-expanded", "false");
+    });
+    Object.values(panels).forEach(panel => panel?.classList.remove("active"));
+    menu.classList.remove("open");
+    nav.classList.remove("dropdown-open");
+    menu.setAttribute("aria-hidden", "true");
+}
+
+function toggleDropdown(button) {
+    const isOpen = button.classList.contains("open");
+    closeDropdowns();
+    if (isOpen) return;
+
+    button.classList.add("open");
+    button.setAttribute("aria-expanded", "true");
+    panels[button.classList[0]]?.classList.add("active");
+    menu.classList.add("open");
+    nav.classList.add("dropdown-open");
+    menu.setAttribute("aria-hidden", "false");
+}
+
+dropdowns.forEach(button => {
+    button.addEventListener("click", event => {
+        event.stopPropagation();
+        toggleDropdown(button);
+    });
+    button.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggleDropdown(button);
+        }
+    });
+});
+
+document.addEventListener("click", event => {
+    if (!event.target.closest(".top") && !event.target.closest(".explore-menu")) closeDropdowns();
+});
+</script>
+<script>
+document.querySelectorAll(".faq-question").forEach(
+    (button) => {
+        button.addEventListener(
+            "click",
+            () => {
+                const item =
+                    button.closest(".faq-item");
+                const wasOpen =
+                    item.classList.contains("active");
+                document
+                    .querySelectorAll(".faq-item")
+                    .forEach(
+                        (otherItem) => {
+                            otherItem.classList.remove(
+                                "active"
+                            );
+                        }
+                    );
+                if (!wasOpen) {
+                    item.classList.add(
+                        "active"
+                    );
+                }
+            }
+        );
+    }
+);
+</script>
+
+
+</body>
+</html>

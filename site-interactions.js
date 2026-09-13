@@ -71,7 +71,7 @@
     /* Sign-in password toggle */
     document.querySelectorAll('.show-password').forEach(function (toggle) {
         toggle.addEventListener('click', function () {
-            var field = toggle.closest('.password-field');
+            var field = toggle.closest('.password-field, .password-wrapper');
             var input = field ? field.querySelector('input') : null;
             if (!input) return;
             var showing = input.type === 'text';

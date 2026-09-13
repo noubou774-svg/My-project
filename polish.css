@@ -55,7 +55,7 @@
     width: 100%;
     max-width: 100%;
     min-height: min(88vh, 780px);
-    padding: calc(75px + 3rem) clamp(1.25rem, 5vw, 4rem) 3.5rem !important;
+    padding: calc(var(--nav-height, 72px) + 3rem) clamp(1.25rem, 5vw, 4rem) 3.5rem !important;
     margin-top: 0 !important;
     border-radius: 0 0 2rem 2rem;
     box-sizing: border-box;
@@ -554,7 +554,7 @@ body.page > section:not(.explore-menu):not(.programs-section),
             "copy"
             "avatars" !important;
         min-height: 0 !important;
-        padding-top: calc(75px + 2rem) !important;
+        padding-top: calc(var(--nav-height, 72px) + 2rem) !important;
     }
 
     .cards-container {
