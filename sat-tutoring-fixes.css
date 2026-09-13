@@ -1,5 +1,11 @@
-/* SAT Tutoring page — layout overrides (loads last) */
+/* SAT Tutoring — align with homepage design system (loads last) */
 
+:root {
+    --sat-container: min(1180px, calc(100% - 3rem));
+    --sat-section-y: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+/* ── Nav ── */
 body.sat-tutoring .top .index-1,
 body.sat-tutoring .top .about-1,
 body.sat-tutoring .top .faq-1,
@@ -10,19 +16,33 @@ body.sat-tutoring .top .donate-1 {
     margin: 0 !important;
 }
 
-/* ── Hero ── */
+/* ── Hero (match index .space) ── */
 body.sat-tutoring .space {
     display: grid !important;
-    grid-template-columns: minmax(260px, 1.05fr) minmax(300px, 0.95fr) !important;
+    grid-template-columns: 1.05fr 0.95fr !important;
     grid-template-areas:
-        "headline avatars"
-        "headline copy" !important;
-    align-items: start !important;
+        "headline copy"
+        "avatars copy" !important;
+    align-items: center !important;
     gap: 1.5rem 3rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
     height: auto !important;
-    min-height: 560px !important;
-    padding: calc(var(--nav-height, 72px) + 2rem) 6% 3.5rem !important;
+    min-height: min(88vh, 780px) !important;
+    margin-top: 0 !important;
+    padding: calc(var(--nav-height, 72px) + 3rem) clamp(1.25rem, 5vw, 4rem) 3.5rem !important;
+    border-radius: 0 0 2rem 2rem !important;
     box-sizing: border-box !important;
+    background:
+        radial-gradient(ellipse 70% 55% at 88% 12%, rgba(57, 166, 163, 0.32), transparent 52%),
+        radial-gradient(ellipse 60% 45% at 8% 88%, rgba(244, 201, 93, 0.18), transparent 48%),
+        linear-gradient(135deg, var(--lv-navy-mid, #1e4468) 0%, var(--lv-navy, #17324D) 45%, var(--lv-navy-deep, #0f2438) 100%) !important;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.06) !important;
+}
+
+body.sat-tutoring .space .bga-05__terrain,
+body.sat-tutoring .space .bga-05__ridge {
+    opacity: 0.25 !important;
 }
 
 body.sat-tutoring .front {
@@ -30,7 +50,6 @@ body.sat-tutoring .front {
     margin: 0 !important;
     width: auto !important;
     height: auto !important;
-    display: block !important;
 }
 
 body.sat-tutoring .front_text {
@@ -38,28 +57,53 @@ body.sat-tutoring .front_text {
     margin: 0 !important;
     word-spacing: normal !important;
     letter-spacing: -0.03em !important;
-    font-size: clamp(2.5rem, 5.5vw, 5rem) !important;
-    line-height: 1.02 !important;
-    color: #382727 !important;
+    font-size: clamp(2.35rem, 5.2vw, 4.35rem) !important;
+    line-height: 1.05 !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+}
+
+body.sat-tutoring .front2 {
+    grid-area: copy !important;
+    margin: 0 !important;
+    width: auto !important;
+    height: auto !important;
 }
 
 body.sat-tutoring .front_text3,
 body.sat-tutoring .hero-lead,
 body.sat-tutoring .hero-partnership,
 body.sat-tutoring .hero-subcopy {
-    color: rgba(56, 39, 39, 0.92) !important;
+    color: rgba(255, 249, 242, 0.92) !important;
+    margin: 0 0 0.75rem !important;
+    font-size: clamp(0.95rem, 1.5vw, 1.125rem) !important;
+    line-height: 1.55 !important;
+}
+
+body.sat-tutoring .hero-stat {
+    color: #fff !important;
+    font-weight: 700 !important;
+}
+
+body.sat-tutoring .hero-subcopy {
+    max-width: 34rem !important;
+    margin-bottom: 1.25rem !important;
+}
+
+body.sat-tutoring .hero-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.65rem !important;
+    margin-top: 1.25rem !important;
 }
 
 body.sat-tutoring .imgs {
     grid-area: avatars !important;
     position: relative !important;
     margin: 0 !important;
-    width: auto !important;
-    height: auto !important;
     display: flex !important;
     gap: 0.35rem !important;
-    justify-self: end !important;
-    align-self: start !important;
+    align-items: center !important;
 }
 
 body.sat-tutoring .man,
@@ -71,49 +115,7 @@ body.sat-tutoring .man2 {
     height: 52px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
-    border: 2px solid rgba(255, 252, 248, 0.9) !important;
-    box-shadow: 0 4px 14px rgba(23, 50, 77, 0.12) !important;
-}
-
-body.sat-tutoring .front2 {
-    grid-area: copy !important;
-    margin: 0 !important;
-    width: auto !important;
-    height: auto !important;
-    display: block !important;
-}
-
-body.sat-tutoring .front_text3,
-body.sat-tutoring .hero-lead {
-    margin: 0 0 0.75rem !important;
-    font-size: clamp(1rem, 1.6vw, 1.25rem) !important;
-    line-height: 1.5 !important;
-}
-
-body.sat-tutoring .hero-stat {
-    font-size: 1.15em;
-    font-weight: 700;
-    color: var(--lv-navy, #17324D);
-}
-
-body.sat-tutoring .hero-partnership {
-    margin: 0 0 0.75rem !important;
-    font-size: 0.95rem !important;
-    color: rgba(56, 39, 39, 0.85) !important;
-}
-
-body.sat-tutoring .hero-subcopy {
-    margin: 0 0 1.25rem !important;
-    max-width: 34rem !important;
-    line-height: 1.55 !important;
-    font-size: 0.95rem !important;
-    color: rgba(56, 39, 39, 0.88) !important;
-}
-
-body.sat-tutoring .hero-actions {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 0.65rem !important;
+    border: 2px solid rgba(255, 255, 255, 0.35) !important;
 }
 
 body.sat-tutoring .for-parents,
@@ -121,48 +123,248 @@ body.sat-tutoring .for-educator {
     position: static !important;
     margin: 0 !important;
     width: auto !important;
-    min-width: 148px !important;
+    min-width: 140px !important;
     height: 46px !important;
+    flex: 1 1 140px !important;
+    max-width: 100% !important;
 }
 
-/* ── Enroll + sections ── */
-body.sat-tutoring .enroll-div {
-    width: 100% !important;
-    max-width: 1180px !important;
-    height: auto !important;
-    margin: 3rem auto !important;
-    padding: 0 6% !important;
-    border-bottom: none !important;
-}
-
-body.sat-tutoring .how-it-works,
-body.sat-tutoring .featured-story,
-body.sat-tutoring .free-tutoring,
-body.sat-tutoring .real-stories,
-body.sat-tutoring .educator-safety,
-body.sat-tutoring .learnivia-faq {
-    width: 100% !important;
-    max-width: 1180px !important;
-    height: auto !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+/* ── Enroll strip ── */
+body.sat-tutoring .enroll-section {
+    width: var(--sat-container) !important;
+    margin: var(--sat-section-y) auto 0 !important;
+    padding: 0 clamp(1.25rem, 5vw, 4rem) 2.5rem !important;
+    display: grid !important;
+    grid-template-columns: minmax(240px, 0.9fr) minmax(280px, 1.1fr) !important;
+    gap: 2rem 3rem !important;
+    align-items: start !important;
+    border-bottom: 1px solid var(--lv-border, rgba(23, 50, 77, 0.1)) !important;
     box-sizing: border-box !important;
 }
 
+body.sat-tutoring .enroll-heading {
+    margin: 0 !important;
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.05 !important;
+    color: var(--lv-navy, #17324D) !important;
+    letter-spacing: -0.03em !important;
+}
+
+body.sat-tutoring .enroll-heading span {
+    display: block !important;
+}
+
+body.sat-tutoring .enroll-tagline {
+    margin: 0.75rem 0 0 !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    color: var(--lv-teal, #39A6A3) !important;
+}
+
+body.sat-tutoring .enroll-copy p {
+    margin: 0 0 1rem !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    color: var(--lv-text-muted, #526A7A) !important;
+}
+
+body.sat-tutoring .enroll-copy p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Hide legacy enroll classes if any remain */
+body.sat-tutoring .enroll-div,
+body.sat-tutoring .enroll-text,
+body.sat-tutoring .enroll-text2,
+body.sat-tutoring .enroll-text3,
+body.sat-tutoring .enroll-text4,
+body.sat-tutoring .enroll2-div,
+body.sat-tutoring .enroll2-text,
+body.sat-tutoring .enroll2-text2 {
+    all: unset !important;
+}
+
+/* ── Bootcamps / program cards (match homepage cards) ── */
+body.sat-tutoring .sat-programs {
+    width: var(--sat-container) !important;
+    max-width: var(--sat-container) !important;
+    margin: 2.5rem auto var(--sat-section-y) !important;
+    padding: 0 clamp(1.25rem, 5vw, 4rem) !important;
+    box-sizing: border-box !important;
+}
+
+body.sat-tutoring .program-tabs {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: clamp(1.5rem, 4vw, 3rem) !important;
+    margin: 0 0 2rem !important;
+    width: 100% !important;
+}
+
+body.sat-tutoring .program-tabs h2 {
+    margin: 0 !important;
+    font-size: clamp(1.5rem, 3vw, 2.25rem) !important;
+    font-weight: 700 !important;
+    color: var(--lv-text-muted, #526A7A) !important;
+    cursor: default !important;
+}
+
+body.sat-tutoring .program-tabs .active-tab {
+    color: var(--lv-navy, #17324D) !important;
+}
+
+body.sat-tutoring .label,
+body.sat-tutoring .label2 {
+    display: none !important;
+}
+
+body.sat-tutoring .headphone-fox,
+body.sat-tutoring .headphone-fox2 {
+    display: block !important;
+    position: static !important;
+    width: 72px !important;
+    height: 72px !important;
+    margin: 0 auto 1.5rem !important;
+    object-fit: contain !important;
+}
+
+body.sat-tutoring .headphone-fox2 {
+    display: none !important;
+}
+
+body.sat-tutoring .program-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.25rem !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+body.sat-tutoring .program-card,
+body.sat-tutoring .program-card-2,
+body.sat-tutoring .focus-card,
+body.sat-tutoring .focus-card-2 {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 1.5rem !important;
+    border-radius: 1.25rem !important;
+    background: var(--lv-surface, #FFFCF8) !important;
+    border: 1px solid var(--lv-border, rgba(23, 50, 77, 0.1)) !important;
+    box-shadow: var(--lv-shadow-sm, 0 8px 24px rgba(23, 50, 77, 0.08)) !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+body.sat-tutoring .focus-card,
+body.sat-tutoring .focus-card-2 {
+    background: rgba(255, 252, 248, 0.92) !important;
+    padding-left: 1.5rem !important;
+}
+
+body.sat-tutoring .program-card h3,
+body.sat-tutoring .program-card-2 h3 {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: var(--lv-navy, #17324D) !important;
+    margin: 0 0 0.65rem !important;
+}
+
+body.sat-tutoring .program-card p,
+body.sat-tutoring .program-card-2 p {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    color: var(--lv-text-muted, #526A7A) !important;
+    flex: 1 !important;
+}
+
+body.sat-tutoring .program-bottom {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.75rem !important;
+    margin-top: 1rem !important;
+    flex-wrap: wrap !important;
+}
+
+body.sat-tutoring .register-btn,
+body.sat-tutoring .light-register {
+    position: static !important;
+    margin: 0 !important;
+    width: auto !important;
+    min-width: 110px !important;
+    height: 40px !important;
+    padding: 0 1rem !important;
+    border-radius: 999px !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+body.sat-tutoring .program-note {
+    width: 100% !important;
+    margin: 1.5rem 0 0 !important;
+    padding: 1rem 1.25rem !important;
+    border-radius: 0.75rem !important;
+    background: rgba(57, 166, 163, 0.08) !important;
+    display: flex !important;
+    gap: 0.75rem !important;
+    align-items: flex-start !important;
+}
+
+body.sat-tutoring .program-note p {
+    margin: 0 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    color: var(--lv-text-muted, #526A7A) !important;
+}
+
+/* ── How it works ── */
 body.sat-tutoring .how-it-works {
-    padding: 3rem 6% !important;
+    width: var(--sat-container) !important;
+    margin: 0 auto var(--sat-section-y) !important;
+    padding: 2.5rem clamp(1.25rem, 5vw, 4rem) !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
     gap: 2.5rem !important;
+    align-items: start !important;
+    border-top: 1px solid var(--lv-border, rgba(23, 50, 77, 0.1)) !important;
+    border-bottom: 1px solid var(--lv-border, rgba(23, 50, 77, 0.1)) !important;
+    box-sizing: border-box !important;
 }
 
-body.sat-tutoring .google-text {
-    margin-top: 1.25rem;
-    font-size: 0.875rem;
-    color: #667085;
+body.sat-tutoring .how-text h2 {
+    font-size: clamp(1.75rem, 3vw, 2.25rem) !important;
+    margin: 0 0 0.75rem !important;
+    color: var(--lv-navy, #17324D) !important;
 }
 
-body.sat-tutoring .google-text strong {
-    font-size: 1rem;
-    color: #382727;
+body.sat-tutoring .how-text p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    color: var(--lv-text-muted, #526A7A) !important;
+}
+
+body.sat-tutoring .how-stats {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+}
+
+body.sat-tutoring .stat-card {
+    min-height: 0 !important;
+    padding: 1rem !important;
+    border-radius: 0.85rem !important;
+    background: var(--lv-surface, #FFFCF8) !important;
+    border: 1px solid var(--lv-border, rgba(23, 50, 77, 0.08)) !important;
+    box-shadow: var(--lv-shadow-sm) !important;
 }
 
 body.sat-tutoring .stat-icon {
@@ -172,29 +374,151 @@ body.sat-tutoring .stat-icon {
     width: 2rem !important;
     height: 2rem !important;
     border-radius: 0.5rem !important;
-    background: rgba(187, 81, 81, 0.12) !important;
+    background: rgba(57, 166, 163, 0.12) !important;
+    color: var(--lv-teal, #39A6A3) !important;
     font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
 }
 
-body.sat-tutoring .stat-icon:empty::before {
-    content: "◆";
+body.sat-tutoring .stat-card strong {
+    color: var(--lv-navy, #17324D) !important;
+}
+
+/* ── Featured testimonial ── */
+body.sat-tutoring .featured-story {
+    width: var(--sat-container) !important;
+    margin: 0 auto var(--sat-section-y) !important;
+    padding: 0 clamp(1.25rem, 5vw, 4rem) !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 1.5rem !important;
+    box-sizing: border-box !important;
+}
+
+body.sat-tutoring .avatar-circle {
+    margin-top: 0 !important;
+}
+
+body.sat-tutoring .featured-content {
+    max-width: none !important;
+    flex: 1 !important;
+}
+
+body.sat-tutoring .something-text-2,
+body.sat-tutoring .featured-content p {
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+    width: auto !important;
+    margin: 0 0 0.75rem !important;
+    color: var(--lv-text, #17324D) !important;
+}
+
+body.sat-tutoring .student-location {
+    position: static !important;
+    display: block !important;
+    margin-top: 0.35rem !important;
+    font-size: 0.85rem !important;
+    color: var(--lv-text-muted, #526A7A) !important;
+}
+
+/* ── Free SAT tutoring band ── */
+body.sat-tutoring .free-tutoring {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: var(--sat-section-y) clamp(1.25rem, 5vw, 4rem) !important;
+    box-sizing: border-box !important;
+    background:
+        linear-gradient(145deg, #145b48 0%, #279173 48%, #104d3d 100%) !important;
+}
+
+body.sat-tutoring .free-tutoring::before {
+    display: none !important;
+}
+
+body.sat-tutoring .free-tutoring-inner {
+    width: var(--sat-container) !important;
+    max-width: var(--sat-container) !important;
+    margin: 0 auto !important;
+}
+
+body.sat-tutoring .free-tutoring h2 {
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+    margin-bottom: 2rem !important;
+}
+
+body.sat-tutoring .free-features {
+    gap: 2rem !important;
+}
+
+body.sat-tutoring .feature-image {
+    margin: 0 0 1rem !important;
+    height: auto !important;
+}
+
+body.sat-tutoring .feature-image img {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: contain !important;
+}
+
+body.sat-tutoring .free-feature h3 {
+    font-size: 1.125rem !important;
+    max-width: none !important;
+}
+
+body.sat-tutoring .free-feature p {
+    font-size: 0.875rem !important;
+}
+
+body.sat-tutoring .free-bottom {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 2rem !important;
+    gap: 2rem !important;
+}
+
+/* ── Real stories ── */
+body.sat-tutoring .real-stories {
+    width: var(--sat-container) !important;
+    margin: var(--sat-section-y) auto !important;
+    padding: 0 clamp(1.25rem, 5vw, 4rem) !important;
+    box-sizing: border-box !important;
+}
+
+body.sat-tutoring .real-stories h2 {
+    font-size: clamp(1.75rem, 3vw, 2.25rem) !important;
+    color: var(--lv-navy, #17324D) !important;
+}
+
+body.sat-tutoring .stories-grid {
+    gap: 1.25rem !important;
+    max-width: 100% !important;
+}
+
+body.sat-tutoring .student-story {
+    padding: 1.25rem !important;
+    border-radius: 1rem !important;
+    background: var(--lv-surface, #FFFCF8) !important;
+    border: 1px solid var(--lv-border, rgba(23, 50, 77, 0.08)) !important;
 }
 
 /* ── Certified tutors ── */
 body.sat-tutoring .meet,
 body.sat-tutoring .tutor {
-    width: min(1180px, 92%) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    width: var(--sat-container) !important;
+    margin-inline: auto !important;
     text-align: center !important;
+    padding-inline: clamp(1.25rem, 5vw, 4rem) !important;
+    box-sizing: border-box !important;
 }
 
 body.sat-tutoring .tutor-videos-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 1.25rem !important;
-    width: min(1180px, 92%) !important;
-    margin: 1.5rem auto 3rem !important;
+    width: var(--sat-container) !important;
+    margin: 1.5rem auto var(--sat-section-y) !important;
+    padding-inline: clamp(1.25rem, 5vw, 4rem) !important;
+    box-sizing: border-box !important;
 }
 
 body.sat-tutoring .student-video,
@@ -203,92 +527,27 @@ body.sat-tutoring .student-video3 {
     margin: 0 !important;
     width: 100% !important;
     height: 280px !important;
-    font-size: 0 !important;
-    color: transparent !important;
-    display: flex !important;
-    align-items: flex-end !important;
-    padding: 1.25rem !important;
-    border-radius: 1.125rem !important;
-    background:
-        linear-gradient(180deg, rgba(23, 50, 77, 0.05) 0%, rgba(23, 50, 77, 0.75) 100%),
-        linear-gradient(145deg, #214F70, #17324D) !important;
-    position: relative !important;
-    overflow: hidden !important;
 }
 
-body.sat-tutoring .student-video::after,
-body.sat-tutoring .student-video2::after,
-body.sat-tutoring .student-video3::after {
-    content: attr(data-label) !important;
-    font-size: 1rem !important;
-    font-weight: 700 !important;
-    color: #fff !important;
+/* ── What you'll learn ── */
+body.sat-tutoring .educator-safety {
+    width: var(--sat-container) !important;
+    margin: 0 auto var(--sat-section-y) !important;
+    padding: 0 clamp(1.25rem, 5vw, 4rem) !important;
+    box-sizing: border-box !important;
 }
 
-/* ── Peer tutoring / Zoom-style video ── */
-body.sat-tutoring .peer {
+body.sat-tutoring .safety-grid {
     display: grid !important;
-    grid-template-columns: 1.1fr 0.9fr !important;
-    gap: 2.5rem !important;
-    align-items: center !important;
-    width: min(1180px, 92%) !important;
-    height: auto !important;
-    margin: 3rem auto !important;
-    padding: 0 !important;
-    position: relative !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.25rem !important;
 }
 
-body.sat-tutoring .book-a {
-    display: none !important;
-}
-
-body.sat-tutoring .the-video {
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-    border-radius: 1.25rem !important;
-    overflow: hidden !important;
-    box-shadow: 0 20px 45px rgba(23, 50, 77, 0.16) !important;
-}
-
-body.sat-tutoring .google-meet {
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
-    margin: 0 !important;
-    aspect-ratio: 16 / 10 !important;
-    object-fit: cover !important;
-    border-radius: 1.25rem !important;
-}
-
-body.sat-tutoring .the-text {
-    margin: 0 !important;
-    width: auto !important;
-    height: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1rem !important;
-}
-
-body.sat-tutoring .peer-text {
-    margin: 0 !important;
-    width: auto !important;
-    font-size: clamp(1.75rem, 3vw, 2.5rem) !important;
-    line-height: 1.15 !important;
-}
-
-body.sat-tutoring .something-text {
-    margin: 0 !important;
-    width: auto !important;
-    max-width: 28rem !important;
-}
-
-body.sat-tutoring .join-bootcamp {
-    position: static !important;
-    width: auto !important;
-    max-width: 240px !important;
-    margin: 0 !important;
-    height: 46px !important;
+body.sat-tutoring .safety-card {
+    padding: 1.25rem !important;
+    border-radius: 1rem !important;
+    background: var(--lv-surface, #FFFCF8) !important;
+    border: 1px solid var(--lv-border, rgba(23, 50, 77, 0.08)) !important;
 }
 
 body.sat-tutoring .educator-label {
@@ -297,79 +556,110 @@ body.sat-tutoring .educator-label {
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #267f70;
+    color: var(--lv-teal, #39A6A3);
     margin-bottom: 0.75rem;
 }
 
-body.sat-tutoring .safety-title h2 {
-    margin: 0 0 0.5rem !important;
+/* ── Peer section (match homepage) ── */
+body.sat-tutoring .book-a {
+    display: none !important;
 }
 
-/* ── Footer ── */
-body.sat-tutoring .learnivia-footer {
-    margin-top: 0 !important;
-    width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-body.sat-tutoring .footer {
-    margin-top: 3rem !important;
-}
-
-/* ── Creator card (about-style overlap fix on pages that include it) ── */
-.creator {
+body.sat-tutoring .peer {
+    width: var(--sat-container) !important;
+    margin: var(--sat-section-y) auto !important;
+    padding: 0 clamp(1.25rem, 5vw, 4rem) !important;
     display: grid !important;
-    grid-template-columns: auto 1fr !important;
-    grid-template-areas:
-        "avatar title"
-        "avatar subtitle"
-        "quote quote"
-        "author author" !important;
+    grid-template-columns: 1.1fr 0.9fr !important;
+    gap: 2.5rem !important;
     align-items: center !important;
-    gap: 0.35rem 1rem !important;
-    padding: 2rem 2rem 2rem 5.5rem !important;
+    box-sizing: border-box !important;
 }
 
-.creator-profil {
-    grid-area: avatar !important;
-    position: relative !important;
-    display: block !important;
+body.sat-tutoring .the-video {
     margin: 0 !important;
-    width: 64px !important;
-    height: 64px !important;
-    border-radius: 50% !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 1.25rem !important;
+    overflow: hidden !important;
+    background: var(--lv-navy-deep, #0f2438) !important;
+    box-shadow: var(--lv-shadow-lg, 0 22px 55px rgba(23, 50, 77, 0.14)) !important;
+}
+
+body.sat-tutoring .google-meet {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    aspect-ratio: 16 / 10 !important;
     object-fit: cover !important;
 }
 
-.creator_text {
-    grid-area: title !important;
+body.sat-tutoring .the-text {
     margin: 0 !important;
-    font-size: 1.25rem !important;
-}
-
-.creator_text2 {
-    grid-area: subtitle !important;
-    margin: 0 !important;
-}
-
-.creator_text3,
-.testimonial-line,
-.testimonial-text,
-.testimonial-author,
-.testimonial-publication {
-    grid-column: 1 / -1 !important;
-    margin-left: 0 !important;
-}
-
-.diplome {
-    position: absolute !important;
-    top: -1rem !important;
-    right: 1rem !important;
-    width: 72px !important;
+    width: auto !important;
     height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
 }
 
+body.sat-tutoring .peer-text {
+    margin: 0 !important;
+    width: auto !important;
+    font-size: clamp(1.65rem, 3vw, 2.35rem) !important;
+    line-height: 1.15 !important;
+    color: var(--lv-navy, #17324D) !important;
+}
+
+body.sat-tutoring .something-text {
+    margin: 0 !important;
+    width: auto !important;
+    max-width: 28rem !important;
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+    color: var(--lv-text-muted, #526A7A) !important;
+}
+
+body.sat-tutoring .join-bootcamp {
+    position: static !important;
+    width: auto !important;
+    min-width: 180px !important;
+    margin: 0 !important;
+    height: 46px !important;
+    align-self: flex-start !important;
+    text-decoration: none !important;
+}
+
+/* ── FAQ + footer ── */
+body.sat-tutoring .learnivia-faq {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: var(--sat-section-y) clamp(1.25rem, 5vw, 4rem) !important;
+    box-sizing: border-box !important;
+}
+
+body.sat-tutoring .faq-inner {
+    width: var(--sat-container) !important;
+    margin: 0 auto !important;
+}
+
+body.sat-tutoring .learnivia-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+body.sat-tutoring .footer {
+    margin-top: 0 !important;
+}
+
+body.sat-tutoring .footer-columns {
+    width: var(--sat-container) !important;
+    margin: 0 auto !important;
+}
+
+/* ── Responsive ── */
 @media (max-width: 900px) {
     body.sat-tutoring .space {
         grid-template-columns: 1fr !important;
@@ -379,19 +669,21 @@ body.sat-tutoring .footer {
             "copy" !important;
     }
 
-    body.sat-tutoring .imgs {
-        justify-self: start !important;
-    }
-
-    body.sat-tutoring .peer {
+    body.sat-tutoring .enroll-section,
+    body.sat-tutoring .how-it-works,
+    body.sat-tutoring .free-bottom,
+    body.sat-tutoring .peer,
+    body.sat-tutoring .safety-grid {
         grid-template-columns: 1fr !important;
     }
 
-    body.sat-tutoring .tutor-videos-grid {
+    body.sat-tutoring .program-grid,
+    body.sat-tutoring .tutor-videos-grid,
+    body.sat-tutoring .stories-grid {
         grid-template-columns: 1fr !important;
     }
 
-    body.sat-tutoring .how-it-works {
-        grid-template-columns: 1fr !important;
+    body.sat-tutoring .featured-story {
+        flex-direction: column !important;
     }
 }
